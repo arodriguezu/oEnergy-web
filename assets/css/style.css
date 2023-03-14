@@ -3,6 +3,7 @@ body {
     height: 100%;
 }
 
-html {
+html li{
     font-family: 'Poppins', sans-serif;
 }
+
