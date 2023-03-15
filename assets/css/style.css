@@ -15,3 +15,7 @@ h2 {
     width: 200px;
     white-space: normal;
 }
+
+.nuestra-historia{
+    background-image: linear-gradient(to bottom, #ffffff, #d2c8ff, #a591fd, #7459f6, #2e12eb);
+}
