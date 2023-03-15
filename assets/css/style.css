@@ -1,8 +1,86 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     width: 100%;
     height: 100%;
 }
 
-html {
-    font-family: 'Poppins', sans-serif;
+h2 {
+    color: orange;
 }
+
+.dropdown-menu .dropdown-item {
+    width: 200px;
+    white-space: normal;
+}
+
+.nuestra-historia{
+    background-image: linear-gradient(to bottom, #ffffff, #d2c8ff, #a591fd, #7459f6, #2e12eb);
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ /* .mision { 
+    background-image: url("/assets/img/mision-1.PNG");
+    height: 430px;
+ }
+
+ .vision { 
+    background-image: url("/assets/img/vision-1.PNG");
+    height: 430px;
+ } */
+
+ /* Container holding the image and the text */
+.mision {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .vision {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
