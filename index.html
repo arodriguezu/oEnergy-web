@@ -432,6 +432,11 @@
   </section>
     <!-- END TEAM-->
 
+    <!-- https://pixelmap.amcharts.com -->
+    <div class="container text-center">
+    <div id="map" style="width: 1000px; height: 400px; margin: auto;"></div>
+  </div>
+
 
   </body>
 
@@ -450,5 +455,133 @@
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
     crossorigin="anonymous"
   ></script>
+  <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
+  <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/chileLow.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script type="text/javascript">
+    AmCharts.makeChart("map",{
+        "type": "map",
+        "pathToImages": "http://www.amcharts.com/lib/3/images/",
+        "addClassNames": true,
+        "fontSize": 15,
+        "color": "#FFFFFF",
+        "projection": "mercator",
+        "backgroundAlpha": 1,
+        "backgroundColor": "rgba(80,80,80,1)",
+        "dataProvider": {
+          "map": "chileLow",
+          "getAreasFromMap": true,
+          "images": [
+            {
+              "top": 40,
+              "left": 60,
+              "width": 80,
+              "height": 40,
+              "pixelMapperLogo": true,
+              "imageURL": "http://pixelmap.amcharts.com/static/img/logo.svg",
+              "url": "http://www.amcharts.com"
+            },
+            {
+              "selectable": true,
+              "title": "Proyecto 01",
+              "longitude": -70.8077,
+              "latitude": -30.4954,
+              "svgPath": "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
+              "color": "rgba(75,216,181,0.8)",
+              "scale": 1.1
+            },
+            {
+              "selectable": true,
+              "longitude": -71.3788,
+              "latitude": -35.4633,
+              "svgPath": "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
+              "color": "rgba(75,216,181,0.8)",
+              "scale": 1
+            },
+            {
+              "selectable": true,
+              "longitude": -71.9499,
+              "latitude": -38.4662,
+              "svgPath": "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
+              "color": "rgba(75,216,181,0.8)",
+              "scale": 1
+            },
+            {
+              "selectable": true,
+              "longitude": -72.6479,
+              "latitude": -39.1118,
+              "svgPath": "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
+              "color": "rgba(75,216,181,0.8)",
+              "scale": 1
+            },
+            {
+              "selectable": true,
+              "longitude": -49.3605,
+              "latitude": -37.6131,
+              "svgPath": "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
+              "color": "rgba(71,140,123,0.8)",
+              "scale": 1
+            }
+          ],
+          "areas": [
+            {
+              "id": "CL-AR",
+              "title": "Araucanía",
+              "color": "rgba(71,140,123,0.8)"
+            },
+            {
+              "id": "CL-ML",
+              "title": "Proyecto 02",
+              "color": "rgba(75,216,181,0.8)"
+            }
+          ]
+        },
+        "balloon": {
+          "horizontalPadding": 15,
+          "borderAlpha": 0,
+          "borderThickness": 1,
+          "verticalPadding": 15
+        },
+        "areasSettings": {
+          "color": "rgba(129,129,129,1)",
+          "outlineColor": "rgba(80,80,80,1)",
+          "rollOverOutlineColor": "rgba(80,80,80,1)",
+          "rollOverBrightness": 20,
+          "selectedBrightness": 20,
+          "selectable": true,
+          "unlistedAreasAlpha": 0,
+          "unlistedAreasOutlineAlpha": 0
+        },
+        "imagesSettings": {
+          "alpha": 1,
+          "color": "rgba(129,129,129,1)",
+          "outlineAlpha": 0,
+          "rollOverOutlineAlpha": 0,
+          "outlineColor": "rgba(80,80,80,1)",
+          "rollOverBrightness": 20,
+          "selectedBrightness": 20,
+          "selectable": true
+        },
+        "linesSettings": {
+          "color": "rgba(129,129,129,1)",
+          "selectable": true,
+          "rollOverBrightness": 20,
+          "selectedBrightness": 20
+        },
+        "zoomControl": {
+          "zoomControlEnabled": true,
+          "homeButtonEnabled": false,
+          "panControlEnabled": false,
+          "right": 38,
+          "bottom": 30,
+          "minZoomLevel": 0.25,
+          "gridHeight": 100,
+          "gridAlpha": 0.1,
+          "gridBackgroundAlpha": 0,
+          "gridColor": "#FFFFFF",
+          "draggerAlpha": 1,
+          "buttonCornerRadius": 2
+        }
+      });
+  </script>
 </html>
