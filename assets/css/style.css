@@ -132,3 +132,67 @@ background-color: #4674b6;
 .footer-oenergy{
   background-color: #0D2436;
 }
+
+.team-directorio{
+  background: #9b9b9b;
+  background: linear-gradient(180deg,#9b9b9b 50%, rgba(255,255,255,1) 100%);
+}
+
+.bg-image-development {
+  background-image: url('/assets/img/eolic-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-image-construction {
+  background-image: url('/assets/img/green-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-image-operation {
+  background-image: url('/assets/img/eolic-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-image-exploitation {
+  background-image: url('/assets/img/green-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Ajuste de altura de cada columna */
+.col-md-3 {
+  height: 300px;
+}
+
+.row.gutter {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.row.gutter > [class^="col-"], 
+.row.gutter > [class*=" col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.bg-image-development,
+.bg-image-construction,
+.bg-image-operation,
+.bg-image-exploitation {
+  border-radius: 20px;
+}
+
+.nuestra-participacion{
+  background-image: url(/assets/img/background-1280.jpg);
+  height: 500px;
+  background-size: cover;
+  align-items: center;
+}
+
+
+/* counter */
+
+/* end counter */
