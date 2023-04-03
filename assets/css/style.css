@@ -17,7 +17,8 @@ h2 {
 }
 
 .nuestra-historia{
-    background-image: linear-gradient(to bottom, #ffffff, #d2c8ff, #a591fd, #7459f6, #2e12eb);
+  background: rgb(70,116,182);
+  background: linear-gradient(0deg, rgba(70,116,182,1) 30%, rgba(70,116,182,1) 49%, rgba(255,255,255,1) 100%);
 }
 
 .center-block {
@@ -124,3 +125,10 @@ h2 {
     flex: 5;
 }
 
+.pdf-proyectos{
+background-color: #4674b6;
+}
+
+.footer-oenergy{
+  background-color: #0D2436;
+}
