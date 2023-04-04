@@ -59,3 +59,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     setTimeout(adjustScrollPosition, 100);
   });
 });
+
+
