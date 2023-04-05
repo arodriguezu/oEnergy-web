@@ -239,3 +239,19 @@ background-color: #4674b6;
     display: none;
   }
 }
+
+.trabajo-comunidades{
+  background: rgb(215,110,20);
+  background: linear-gradient(180deg, rgba(215,110,20,1) 25%, rgba(255,255,255,1) 100%);
+}
+
+.row > div {
+  padding: 0 4px !important;
+}
+
+img {
+margin-top: 8px;
+vertical-align: middle;
+
+}
+
