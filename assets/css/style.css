@@ -9,6 +9,8 @@ body {
 
 h2 {
   color: #d76e14;
+  font-weight: bold;
+
 }
 
 .dropdown-menu .dropdown-item {
@@ -45,13 +47,13 @@ h2 {
 /* Container holding the image and the text */
 .mision {
   position: relative;
-  text-align: center;
+  display: flex; align-items: center; justify-content: center;
   color: white;
 }
 
 .vision {
   position: relative;
-  text-align: center;
+  display: flex; align-items: center; justify-content: center;
   color: white;
 }
 
@@ -91,7 +93,8 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
-.container-team {
+
+/* .container-team {
   display: flex;
   width: 50vw;
   margin: 80px auto;
@@ -128,15 +131,97 @@ h2 {
 
 .active {
   flex: 5;
+} */
+
+
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+.panel {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 20px;
+	color: #ffffff;
+	cursor: pointer;
+	flex: 0.5;
+	height: 500px;
+	margin: 10px;
+	position: relative;
+	transition: flex 0.7s ease-in;
 }
+
+.panel h3 {
+	font-size: 24px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	margin: 0;
+	opacity: 0;
+}
+
+.panel.active {
+	flex: 1;
+}
+
+.panel.active h3 {
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel h4 {
+	font-size: 12px;
+	position: absolute;
+	bottom: 5px;
+	left: 30px;
+	margin: 0;
+	opacity: 0;
+}
+
+.panel.active h4 {
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+	.container {
+		width: 100vw;
+	}
+
+	.panel:nth-of-type(4),
+	.panel:nth-of-type(5) {
+		display: none;
+	}
+}
+
+body-team {
+	align-items: center;
+	background-color: #212121;
+	display: flex;
+	font-family: "Muli", sans-serif;
+	height: 100vh;
+	justify-content: center;
+	margin: 0;
+	overflow: hidden;
+}
+
+.container-team {
+	display: flex;
+	width: 90vw;
+}
+
+/* END TEAM */
+
+
 
 .pdf-proyectos {
   background-color: #4674b6;
 }
 
-.footer-oenergy {
+/* .footer-oenergy {
   background-color: #0d2436;
-}
+  margin-top: 50px; 
+  margin-bottom: 50px;
+} */
 
 .team-directorio {
   background: #9b9b9b;
@@ -199,64 +284,153 @@ h2 {
 
 /* counter */
 
-/* expanding cards agrosolar */
+.text-justify {
+  text-align: justify;
+}
 
-.panel {
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 60px;
-  color: #fff;
-  cursor: pointer;
-  flex: 1;
-  margin: 10px;
+
+.icono-escala {
+  width: 90px;
+  height: 90px;
+}
+
+
+/* TIMELINES */
+/* 
+.timeline {
   position: relative;
-  transition: flex 0.7s ease-in;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.panel h3 {
-  font-size: 24px;
+.container-year {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container-year::after {
+  content: '';
   position: absolute;
-  bottom: 20px;
-  left: 40px;
-  margin: 0;
-  opacity: 0;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #d76e14;
+  border: 4px solid #0d2436;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-.panel.active {
-  flex: 5;
+.left {
+  left: 0;
 }
 
-.panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
+.right {
+  left: 50%;
 }
 
-@media (max-width: 480px) {
-  .container {
-    width: 100vw;
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+
+ */
+
+ .timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* .line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #0d2436;
+  transform: translateX(-50%);
+} */
+
+.container-year {
+  position: relative;
+  padding: 20px;
+}
+
+.container-year.left {
+  text-align: right;
+}
+
+.container-year.right {
+  text-align: left;
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fca311;
+  border: 2px solid #0d2436;
+}
+
+.content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+
+#proyectos {
+  padding-top: 100px; /* Ajusta el espaciado superior según sea necesario */
+  padding-bottom: 50px; /* Ajusta el espaciado inferior según sea necesario */
+}
+
+#proyectos h2,
+#proyectos h5 {
+  font-size: 32px; /* Aumenta el tamaño de las fuentes según sea necesario */
+}
+
+#proyectos .row {
+  justify-content: center; /* Centra las columnas horizontalmente */
+}
+
+@media (min-width: 768px) {
+  #proyectos .col-md-3 {
+    max-width: 25%; /* Establece un ancho máximo para las columnas en pantallas medianas y más grandes */
   }
-
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-  }
-}
-
-.trabajo-comunidades {
-  background: rgb(215, 110, 20);
-  background: linear-gradient(
-    180deg,
-    rgba(215, 110, 20, 1) 25%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-
-.row > div {
-  padding: 0 4px !important;
-}
-
-img {
-  vertical-align: middle;
 }
