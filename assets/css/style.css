@@ -133,6 +133,25 @@ p {
 }
 
 @media (min-width: 768px) {  /* Se aplica solo en pantallas medianas y más grandes */
+  .border-md-right-mision {
+    position: relative;
+  }
+
+  .border-md-right-mision::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0%;  /* Ajusta según sea necesario */
+    bottom: 0%; /* Ajusta según sea necesario */
+    width: 2px;
+    background: #ffffff;
+  }
+}
+
+
+
+
+@media (min-width: 768px) {  /* Se aplica solo en pantallas medianas y más grandes */
   .border-md-right {
     position: relative;
   }
