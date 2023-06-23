@@ -8,9 +8,11 @@
   <title>oEnergy</title>
 
   <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&display=swap"
+    rel="stylesheet">
 
   <!--   FONTAWESOME -->
   <script src="https://kit.fontawesome.com/5298658fa2.js" crossorigin="anonymous"></script>
@@ -26,7 +28,7 @@
 <body>
   <!-- START NAVBAR-->
 
-  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="font-size: 22px;">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html">
         <img src="./assets/img/logo oenergy SVG.svg" alt="logoPrincipal" height="45" />
@@ -100,8 +102,9 @@
             </ul>
           </li>
 
-          <li class="nav-item">
-            <button class="btn btn-outline-light" style="background-color: #d76e14" type="submit">
+          <li class="nav-item align-center">
+            <button class="btn rounded-pill btn-outline-light" style="background-color: #d76e14; font-size: 22px;"
+              type="submit">
               CONTÁCTANOS
             </button>
           </li>
@@ -112,149 +115,96 @@
   <!-- END NAVBAR-->
 
   <!-- START VIDEO SECTION -->
-  <div class="container-fluid m-0 p-0">
+  <!--   <div class="container-fluid m-0 p-0">
     <video class="w-100" autoplay loop muted>
       <source src="./assets/img/Drone.mp4" type="video/mp4" />
     </video>
-  </div>
+  </div> -->
   <!-- END VIDEO SECTION -->
 
-  <!-- START CONOCENOS SECTION-->
-  <!--   <section class="conocenos my-5 py-2">
-      <div class="container text-center">
-        <h2>CONÓCENOS</h2>
-        <h3>Insurance made simple for you</h3>
-        <p>
-          We work with several leading insurance companies to secure insurance
-          coverages tailored to meet your needs.
-        </p>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-  <!-- END CONOCENOS SECTION-->
-
   <!-- START NUESTRA-HISTORIA SECTION-->
+  <section>
 
-  <!--     <section class="nuestra-historia my-5 py-2" id="historia">
-      <div class="container text-center">
-        <h2>NUESTRA HISTORIA</h2>
-        <h3>Insurance made simple for you</h3>
-      </div>
-      <div class="container" style="height: 400px">
-        <div class="row">
-          <div class="col-4">
-            <img
-              src="./assets/img/nuestra-historia-video-placeholder.PNG"
-              alt=""
-              style="border-radius: 3%"
-            />
-          </div>
-          <div class="col-8 p-5">
-            <h4 class="w-100">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h4>
-          </div>
+
+    <h1 class="text-center pt-5">NUESTRA HISTORIA</h1>
+    <div class="timeline">
+      <div class="line"></div>
+
+      <div class="container-year left visible">
+        <div class="content">
+          <h2 class="title-historia no-margin">2013</h2>
+          <p class="no-margin" style="font-size: 24px;">Se constituye “oEnergy Asesoría y Proyectos de Gestión SpA”</p>
+          <p style="font-weight: bold; font-size: 24px;">Colaboradores: 2</h3>
         </div>
-        <h3 class="text-center pt-5">Buscar hitos importantes</h3>
       </div>
-    </section> -->
-
-  <h2 class="text-center pt-5">NUESTRA HISTORIA</h2>
-  <div class="timeline">
-    <div class="line"></div>
-
-    <div class="container-year left visible">
-      <div class="content">
-        <h2>2013</h2>
-        <p>Se constituye “oEnergy Asesoría y Proyectos de Gestión SpA”</p>
-        <p>Colaboradores: 2</p>
+      <div class="container-year right visible">
+        <div class="content">
+          <h2 class="title-historia">2015</h2>
+          <p style="font-size: 24px;">
+            Se firma un acuerdo de joint venture con la filial chilena de la
+            empresa alemana Sybac para el desarrollo del primer portafolio de 36
+            MWp de energía distribuida en el segmento PMGD
+          </p>
+          <p style="font-weight: bold; font-size: 24px;">Colaboradores: 7</p>
+        </div>
+      </div>
+      <div class="container-year left visible">
+        <div class="content">
+          <h2 class="title-historia">2017</h2>
+          <p class="no-margin" style="font-size: 24px;">Se constituye la Constructora oEnergy SpA y oEnergy OyM SpA</p>
+          <p style="font-weight: bold; font-size: 24px;">Colaboradores: 75</p>
+        </div>
+      </div>
+      <div class="container-year right visible">
+        <div class="content">
+          <h2 class="title-historia">2020</h2>
+          <p class="no-margin" style="font-size: 24px;">
+            Se constituye oEnergy IPP SpA y se firma acuerdo de joint venture a
+            largo plazo con Blue Elephant Energy (BEE) para desarrollar,
+            construir y operar un portafolio de 119,5 MWp de energía solar
+            distribuida
+          </p>
+          <p style="font-weight: bold; font-size: 24px;">Colaboradores: 135</p>
+        </div>
+      </div>
+      <div class="container-year left visible">
+        <div class="content">
+          <h2 class="title-historia">2021</h2>
+          <p class="no-margin" style="font-size: 24px;">
+            oEnergy recibe un crédito senior bajo esquema de Project Finance por
+            parte de la Corporación Interamericana para el Financiamiento de
+            Infraestructura (CIFI) para la construcción de un portafolio de 72
+            MWp de energía solar distribuida
+          </p>
+          <p style="font-weight: bold; font-size: 24px;">Colaboradores: 145</p>
+        </div>
+      </div>
+      <div class="container-year right visible">
+        <div class="content">
+          <h2 class="title-historia">2023</h2>
+          <p class="no-margin" style="font-size: 24px;">
+            Se inaugura PFV El Tiuque, el primer PMGD con baterías en Chile,
+            proyecto desarrollado con la empresa china Huawei y la empresa
+            chilena Dartel
+          </p>
+          <p style="font-weight: bold; font-size: 24px;">Colaboradores: 200</p>
+        </div>
       </div>
     </div>
-    <div class="container-year right visible">
-      <div class="content">
-        <h2>2015</h2>
-        <p>Se firma un acuerdo de joint venture con la filial chilena de la empresa alemana Sybac para el desarrollo del
-          primer portafolio de 36 MWp de energía distribuida en el segmento PMGD</p>
-        <p>Colaboradores: 7</p>
-      </div>
-    </div>
-    <div class="container-year left visible">
-      <div class="content">
-        <h2>2017</h2>
-        <p>Se constituye la Constructora oEnergy SpA y oEnergy OyM SpA</p>
-        <p>Colaboradores: 75</p>
-      </div>
-    </div>
-    <div class="container-year right visible">
-      <div class="content">
-        <h2>2020</h2>
-        <p>Se constituye oEnergy IPP SpA y se firma acuerdo de joint venture a largo plazo con Blue Elephant Energy
-          (BEE) para desarrollar, construir y operar un portafolio de 119,5 MWp de energía solar distribuida</p>
-        <p>Colaboradores: 135</p>
-      </div>
-    </div>
-    <div class="container-year left visible">
-      <div class="content">
-        <h2>2021</h2>
-        <p>oEnergy recibe un crédito senior bajo esquema de Project Finance por parte de la Corporación Interamericana
-          para el Financiamiento de Infraestructura (CIFI) para la construcción de un portafolio de 72 MWp de energía
-          solar distribuida</p>
-        <p>Colaboradores: 145</p>
-      </div>
-    </div>
-    <div class="container-year right visible">
-      <div class="content">
-        <h2>2023</h2>
-        <p>Se inaugura PFV El Tiuque, el primer PMGD con baterías en Chile, proyecto desarrollado con la empresa china
-          Huawei y la empresa chilena Dartel</p>
-        <p>Colaboradores: 200</p>
-      </div>
-    </div>
-  </div>
-
-
+  </section>
   <!-- END NUESTRA-HISTORIA SECTION-->
   <!-- START QUE HACEMOS-->
 
   <section class="que-hacemos my-5 py-2" id="que-hacemos">
-    <div class="container text-center">
-      <h2>QUÉ HACEMOS</h2>
-      <h3>
+    <div class="container text-center py-5">
+      <h1 class="pb-5">QUÉ HACEMOS</h1>
+      <h3 class="text-justify" style="color: black;">
         oEnergy es una empresa chilena dedicada al desarrollo, construcción,
         operación, mantenimiento y explotación de Recursos Energéticos
         Distribuidos.
       </h3>
     </div>
-    <div class="container justify-content-center mt-5 pt-3">
+    <div class="container justify-content-center my-5">
       <div class="row justify-content-center">
         <div class="col-lg-3 col-md-6 col-sm-12 pt-3">
           <div class="card mx-auto" style="width: 16rem; border-color: transparent">
@@ -262,7 +212,7 @@
               src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
               class="card-img-top" alt="Desarrollo" style="height: 18rem; border-radius: 20px" />
             <div class="card-body">
-              <h5 class="card-title text-center">Desarrollo</h5>
+              <h3 class="card-title text-center">Desarrollo</h3>
             </div>
           </div>
         </div>
@@ -270,10 +220,9 @@
           <div class="card mx-auto" style="width: 16rem; border-color: transparent">
             <img
               src="https://images.unsplash.com/photo-1529310399831-ed472b81d589?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-              class="card-img-top" alt="Explotación" style="height: 18rem;
-                border-radius: 20px;">
+              class="card-img-top" alt="Explotación" style="height: 18rem; border-radius: 20px" />
             <div class="card-body">
-              <h5 class="card-title text-center">Explotación</h5>
+              <h3 class="card-title text-center">Explotación</h3>
             </div>
           </div>
         </div>
@@ -283,7 +232,7 @@
               src="https://images.unsplash.com/photo-1508001300512-4763bb1c5583?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGVuZXJnaWElMjByZW5vdmFibGV8ZW58MHwxfDB8fHwy&auto=format&fit=crop&w=500&q=60"
               class="card-img-top" alt="Construcción" style="height: 18rem; border-radius: 20px" />
             <div class="card-body">
-              <h5 class="card-title text-center">Construcción</h5>
+              <h3 class="card-title text-center">Construcción</h3>
             </div>
           </div>
         </div>
@@ -293,7 +242,7 @@
               src="https://images.unsplash.com/photo-1548613053-22087dd8edb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
               class="card-img-top" alt="Operación" style="height: 18rem; border-radius: 20px" />
             <div class="card-body">
-              <h5 class="card-title text-center">Operación</h5>
+              <h3 class="card-title text-center">Operación</h3>
             </div>
           </div>
         </div>
@@ -304,68 +253,50 @@
   <!-- END QUE-HACEMOS-->
 
   <!-- START MISION Y VISION-->
-  <section class="mision-vision py-5 container" id="mision-vision">
-    <div class="container text-center">
-      <h2>MISIÓN Y VISIÓN</h2>
-    </div>
-    <div class="container p-1 mt-5">
-      <div class="row">
-        <div class="col-md">
-          <div class="card text-white m-3" style="
-            max-width: 38rem;
-            min-height: 30rem;
-            border-radius: 20px;
-            border: none;
-            background-color: #4674b6;
-          ">
-            <img
-              src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              class="card-img-top" style="object-fit: cover; height: 15rem; border-radius: 20px 20px 0 0;"
-              alt="mision" />
-            <div class="card-body">
-              <h3 class="card-title">MISIÓN</h3>
-              <p class="card-text fs-4">
-                Promocionar y democratizar la masificación de los Recursos Energéticos Distribuidos.
-              </p>
-            </div>
-          </div>
+  <section class="text-center py-1 my-5"
+    style="background-color: #d76e14; box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);">
+    <div class="container my-5 py-5" style="background-color: #d76e14;">
+      <div class="row d-flex">
+        <!-- <div class="col-md-6">
+        <img
+          src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+          class="card-img-top"
+          style="object-fit: cover; height: 15rem; border-radius: 20px 20px 0 0;"
+          alt="mision"
+        />
+      </div> -->
+        <div class="col-md-6" style="border-right: 3px solid white;">
+          <h1 style="color: white">MISIÓN</h1>
+          <h3 style="color: white">
+            Promocionar y democratizar la masificación de los Recursos
+            Energéticos Distribuidos.
+          </h3>
         </div>
-        <div class="col-md">
-          <div class="card text-white m-3" style="
-            max-width: 38rem;
-            min-height: 30rem;
-            border-radius: 20px;
-            border: none;
-            background-color: #4674b6;
-          ">
-            <img
-              src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1458&q=80"
-              class="card-img-top" style="object-fit: cover; height: 15rem; border-radius: 20px 20px 0 0;"
-              alt="vision" />
-            <div class="card-body">
-              <h3 class="card-title">VISIÓN</h3>
-              <p class="card-text fs-4">
-                Ser especialistas en los recursos energéticos distribuidos, siendo pioneros en el uso y desarrollo de
-                nuevas tecnologías.
-              </p>
-            </div>
-          </div>
+        <div class="col-md-6">
+          <h1 style="color: white;">VISIÓN</h1>
+          <h3 style="color: white">
+            Ser especialistas en los recursos energéticos distribuidos, siendo pioneros
+            en el uso y desarrollo de nuevas tecnologías
+          </h3>
         </div>
       </div>
     </div>
 
+
   </section>
+
+
 
   <!-- END MISION Y VISION-->
 
   <!-- START VALORES-->
-  <section class="valores my-5 py-5 container border-top border-4 border-warning">
-    <div class="text-center">
-      <h2>VALORES</h2>
+  <section class="valores container my-3 "> <!-- border-top border-4 border-warning -->
+    <div class="text-center py-4">
+      <h1 class="py-5">VALORES</h1>
     </div>
-    <div class="container">
-      <div class="d-flex flex-wrap justify-content-around">
-        <div class="card shadow-lg m-3 p-3" style="width: 20rem; max-width: 100%; border-radius: 20px;">
+    <div class="container my-5">
+      <div class="d-flex flex-wrap justify-content-around pb-5">
+        <div class="card shadow-lg m-3 p-3" style="width: 24rem; max-width: 100%; border-radius: 20px">
           <div class="d-flex align-items-center justify-content-center" style="height: 100px">
             <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24">
               <path fill="#d76e14"
@@ -373,8 +304,8 @@
             </svg>
           </div>
           <div class="card-body text-center">
-            <h5 class="card-title py-2 fs-2">Innovación</h5>
-            <p class="card-text">
+            <h2 class="card-title py-2" style="color:#0d2436;">Innovación</h2>
+            <p class="card-text text-justify">
               Somos flexibles ante los cambios y nos enorgullecemos de ser
               pioneros en el uso de nuevas tecnologías. Creemos en la mejora
               continua y no le tenemos miedo a los desafíos y a la novedad.
@@ -384,7 +315,7 @@
             </p>
           </div>
         </div>
-        <div class="card shadow-lg m-3 p-3" style="width: 20rem; max-width: 100%; border-radius: 20px;">
+        <div class="card shadow-lg m-3 p-3" style="width: 24rem; max-width: 100%; border-radius: 20px">
           <div class="d-flex align-items-center justify-content-center" style="height: 100px">
             <svg width="90" height="90" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#d76e14"
               clip-rule="evenodd">
@@ -393,8 +324,8 @@
             </svg>
           </div>
           <div class="card-body text-center">
-            <h5 class="card-title py-2 fs-2">Sustenabilidad</h5>
-            <p class="card-text">
+            <h2 class="card-title py-2 " style="color:#0d2436;">Sustenabilidad</h2>
+            <p class="card-text text-justify">
               Creemos que todos y todas podemos contribuir a la lucha contra
               el cambio climático, tomando medidas concretas pensando en las
               generaciones futuras. Queremos aportar en la generación de la
@@ -403,7 +334,7 @@
             </p>
           </div>
         </div>
-        <div class="card shadow-lg m-3 p-3" style="width: 20rem; max-width: 100%; border-radius: 20px;">
+        <div class="card shadow-lg m-3 p-3" style="width: 24rem; max-width: 100%; border-radius: 20px">
           <div class="d-flex align-items-center justify-content-center" style="height: 100px">
             <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 24 24">
               <path fill="#d76e14"
@@ -411,8 +342,8 @@
             </svg>
           </div>
           <div class="card-body text-center">
-            <h5 class="card-title p-2 fs-2">Compromiso</h5>
-            <p class="card-text">
+            <h2 class="card-title p-2" style="color:#0d2436;">Compromiso</h2>
+            <p class="card-text text-justify">
               Nuestros colaboradores trabajan con la conciencia de que su
               trabajo y talento es fundamental para el cumplimiento de
               nuestros objetivos como grupo y cotidianamente dan lo mejor de
@@ -425,160 +356,266 @@
       </div>
     </div>
   </section>
-
   <!-- END VALORES-->
 
   <!-- START TEAM-->
-  <section class="team my-5 py-5" id="team">
-    <div class="container text-center pb-5">
-      <h2>TEAM</h2>
+  <!--  <section class="team my-5 py-5 team-directorio" id="team">
+    <div class="container text-center justify-content-center pb-5 ">
+      <h1>TEAM</h1>
       <h3>
         El mayor valor de oEnergy está en las personas que trabajan por este
         proyecto. Nuestro Equipo Directivo lo conforman profesionales de
         primer nivel.
       </h3>
     </div>
-
-    <div class="container container-team body-team">
-      <div class="panel" style="background-image: url('./assets/img/R.Sylvester\ 5.jpg')">
+    <div class="director-container">
+      <div class="director-panel" tabindex="0">
+        <img src="./assets/img/R.Sylvester 5.jpg" alt="Foto de Ricardo Sylvester Zapata" />
         <h3>Ricardo Sylvester Zapata</h3>
-        <h4>Socio Fundador y Gerente General</h4>
-        <h5></h5>
+        <p>
+          Socio Fundador y Gerente General<br />Ingeniero Civil Eléctrico de la Universidad de Concepción. Antes de
+          fundar
+          oEnergy desde cero, se desempeñó en diferentes cargos ejecutivos en
+          Minera Disputada, en el proveedor de TI DTS y en la aeronáutica ENAER.
+          Desde los comienzos de oEnergy, Ricardo Sylvester es Gerente General de
+          todas las empresas que componen el grupo oEnergy, además de ser
+          Gerente de Construcción, liderar el montaje de equipos, brindando también
+          orientación operativa y técnica diaria.
+        </p>
       </div>
-      <div class="panel" style="background-image: url('./assets/img/Y.Andrade\ 3.jpg')">
-        <h3>Wild Forest</h3>
+      <div class="director-panel" tabindex="0">
+        <img src="./assets/img/Y.Andrade 3.jpg" alt="Foto de Yuri Andrade Sylvester" />
+        <h3>Yuri Andrade Sylvester</h3>
+        <p>
+          Socio Fundador y Director de Desarrollo de Negocios<br />Ingeniero en Ciencias de Materiales de la Universidad
+          de Cornell. Antes de
+          fundar oEnergy desde cero, se desempeñó como ingeniero en Intel y en
+          Carl Zeiss. Desde los comienzos de oEnergy, Yuri Andrade es Gerente de
+          Desarrollo de Negocios, siendo responsable de todos los proyectos
+          llevados a RTB, además de estar a cargo de la gestión de la organización,
+          incluida la definición de la estrategia, liderando también el montaje de
+          equipos y brindando orientación operativa y técnica diaria.
+        </p>
       </div>
-      <div class="panel" style="background-image: url('./assets/img/G.Paredes\ 3.jpg')">
-        <h3>Sunny Beach</h3>
+      <div class="director-panel" tabindex="0">
+        <img src="./assets/img/G.Paredes 3.jpg" alt="Foto de Gonzalo Paredes" />
+        <h3>Gonzalo Paredes</h3>
+        <p>
+          Gerente Legal<br />Universidad de Chile/Stanford
+          (ENAP, Shearman &amp; Sterling LLP)
+        </p>
       </div>
-      <div class="panel" style="background-image: url('./assets/img/C.Guerrero\ 3.jpg')">
-        <h3>City on Winter</h3>
+      <div class="director-panel" tabindex="0">
+        <img src="./assets/img/C.Guerrero 3.jpg" alt="Foto de Carlos Guerrero" />
+        <h3>Carlos Guerrero</h3>
+        <p>
+          Gerente de Desarrollo <br /> Abogado
+          Universidad Mayor
+          (Lavín Abogados, Aaktei)
+        </p>
       </div>
-      <div class="panel" style="background-image: url('./assets/img/G.Mendez\ 1.jpg')">
-        <h3>Mountains - Clouds</h3>
+      <div class="director-panel" tabindex="0">
+        <img src="./assets/img/G.Mendez 1.jpg" alt="Foto de Gabriel Mendez" />
+        <h3>Gabriel Méndez</h3>
+        <p>
+          Gerente de TI <br />
+          Ingeniero de Sistemas
+          UNEXPO
+          (Servicios Casmen)
+        </p>
       </div>
-      <div class="panel" style="background-image: url('./assets/img/A.Sylvester\ 2.jpg')">
-        <h3>Mountains - Clouds</h3>
+      <div class="director-panel" tabindex="0">
+        <img src="./assets/img/A.Sylvester 2.jpg" alt="Foto de Andres Sylvester" />
+        <h3>Andrés Sylvester</h3>
+        <p>
+          Gerente de Asset Management <br />
+          Ingeniero Civil, Energía y Ambiente
+          Universidad Adolfo Ibáñez
+          Diplomado en Finanzas MIT
+        </p>
       </div>
-      <div class="panel" style="background-image: url('./assets/img/C.Ocares\ 2.jpg')">
-        <h3>Mountains - Clouds</h3>
+      <div class="director-panel" tabindex="0">
+        <img src="./assets/img/C.Ocares 2.jpg" alt="Foto de Claudio Ocares" />
+        <h3>Claudio Ocares</h3>
+        <p>
+          Gerente de Administración y Finanzas<br />Ingeniero Civil Eléctrico y MBA
+          Universidad TFSM | ESE Business School
+          (Transnet, CGE, Cruzeiro Gomas)</p>
       </div>
-      <div class="panel" style="background-image: url('./assets/img/A.Ferrini\ 5.jpg')">
-        <h3>Mountains - Clouds</h3>
+      <div class="director-panel" tabindex="0">
+        <img src="./assets/img/A.Ferrini 5.jpg" alt="Foto de Adriana Ferrini" />
+        <h3>Adriana Ferrini</h3>
+        <p>
+          Gerente de Ingeniería<br />Ingeniero Civil
+          Universidad de Los Andes
+          (DyC Integrados, LEN y Asoc.)
+        </p>
       </div>
-      <div class="panel" style="background-image: url('./assets/img/M.Chacc\ 1.jpg')">
-        <h3>Mountains - Clouds</h3>
+      <div class="director-panel" tabindex="0">
+        <img src="./assets/img/M.Chacc 1.jpg" alt="Foto de Macarena Chacc" />
+        <h3>Macarena Chacc</h3>
+        <p>
+          Gerente de Asuntos Corporativos<br />
+          Abogada
+          Universidad de Chile
+          (Enrique Barros y Cia, PPU, Marca Chile)
+        </p>
+      </div>
+    </div> -->
+
+  <div class="container text-center">
+    <h1>EQUIPO DIRECTIVO</h1>
+    <div class="row align-items-center text-start mt-5">
+      <div class="col-3">
+        <img src="./assets/img/R.Sylvester 5.jpg" alt="Foto de Rircardo Sylvester" class="img-fundadores " />
+      </div>
+      <div class="col-9 pe-2">
+        <h2>Ricardo Sylvester Zapata</h2>
+        <p class="no-margin" style="font-weight: bold;">Socio Fundador y Gerente General</p>
+        <p style="font-weight: bold;">Ingeniero Civil Eléctrico de la Universidad de Concepción</p>
+        <p>Antes de fundar oEnergy desde cero, se desempeñó en diferentes cargos ejecutivos en Minera Disputada, en el
+          proveedor de TI DTS y en la aeronáutica ENAER. Desde los comienzos de oEnergy, Ricardo Sylvester es Gerente
+          General de
+          todas las empresas que componen el grupo oEnergy, además de ser Gerente de Construcción, liderar el montaje de
+          equipos, brindando también orientación operativa y técnica diaria.</p>
+      </div>
+    </div>
+    <div class="row align-items-center text-end">
+      <div class="col-9">
+        <h2>Yuri Andrade Sylvester</h2>
+        <h3>Socio Fundador y Director de Desarrollo de Negocios </h3>
+        <h3> Ingeniero en Ciencias de Materiales de la Universidad de Cornell </h3>
+        <p> Antes de fundar oEnergy desde cero, se desempeñó como ingeniero en Intel y en Carl Zeiss. Desde los
+          comienzos de oEnergy, Yuri Andrade es Gerente de
+          Desarrollo de Negocios, siendo responsable de todos los proyectos llevados a RTB, además de estar a cargo de
+          la gestión de la organización, incluida la definición de la
+          estrategia, liderando también el montaje de equipos y brindando orientación operativa y técnica diaria.</p>
+      </div>
+      <div class="col-3">
+        <img src="./assets/img/Y.Andrade 3.jpg" alt="Foto de Yuri Andrade Sylvester" class="img-fundadores " />
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="container-directorio mt-5 pt-5">
+    <!-- Repite este bloque para cada director -->
+    <div class="panel-directorio">
+      <img src="./assets/img/G.Paredes 3.jpg" alt="Imagen de Director" class="director-image-directorio" />
+      <div class="content-directorio">
+        <h3>Gonzalo Paredes</h3>
+        <p class="no-margin">Gerente Legal</p>
+        <p class="no-margin">Abogado</p>
+        Universidad de Chile/Stanford
+        (ENAP, Shearman &amp; Sterling LLP)</p>
       </div>
     </div>
 
-  </section>
+    <div class="panel-directorio">
+      <img src="./assets/img/C.Guerrero 3.jpg" alt="Imagen de Director" class="director-image-directorio" />
+      <div class="content-directorio">
+        <h3>Carlos Guerrero</h3>
+        <p class="no-margin">Gerente de Desarrollo </p>
+        <p class="no-margin">Abogado </p>
+        Universidad Mayor
+        (Lavín Abogados, Aaktei)</p>
+      </div>
+    </div>
+
+    <div class="panel-directorio">
+      <img src="./assets/img/G.Mendez 1.jpg" alt="Imagen de Director" class="director-image-directorio" />
+      <div class="content-directorio">
+        <h3>Gabriel Méndez</h3>
+        <p class="no-margin">Gerente de TI </p>
+        <p class="no-margin"> Ingeniero de Sistemas </p>
+        UNEXPO
+        (Servicios Casmen)
+      </div>
+    </div>
+
+    <div class="panel-directorio">
+      <img src="./assets/img/A.Sylvester 2.jpg" alt="Imagen de Director" class="director-image-directorio" />
+      <div class="content-directorio">
+        <h3>Andrés Sylvester</h3>
+        <p class="no-margin">Gerente de Asset Management</p>
+        <p class="no-margin"> Ingeniero Civil, Energía y Ambiente</p>
+        Universidad Adolfo Ibáñez
+        Diplomado en Finanzas – MIT
+      </div>
+    </div>
+
+    <div class="panel-directorio">
+      <img src="./assets/img/C.Ocares 2.jpg" alt="Imagen de Director" class="director-image-directorio" />
+      <div class="content-directorio">
+        <h3>Carlos Ocares</h3>
+        <p class="no-margin">Gerente de Administración y Finanzas </p>
+        <p class="no-margin">Ingeniero Civil Eléctrico y MBA </p>
+          Universidad TFSM | ESE Business School
+          (Transnet, CGE, Cruzeiro Gomas)
+      </div>
+    </div>
+
+    <div class="panel-directorio">
+      <img src="./assets/img/A.Ferrini 5.jpg" alt="Imagen de Director" class="director-image-directorio" />
+      <div class="content-directorio">
+        <h3>Adriana Ferrini</h3>
+        <p class="no-margin">Gerente de Ingeniería </p>
+        <p class="no-margin"> Ingeniero Civil </p>
+        Universidad de Los Andes
+        (DyC Integrados, LEN y Asoc.)
+      </div>
+    </div>
+
+    <div class="panel-directorio">
+      <img src="./assets/img/M.Chacc 1.jpg" alt="Imagen de Director" class="director-image-directorio" />
+      <div class="content-directorio">
+        <h3>Macarena Chacc</h3>
+        <p class="no-margin">Gerente de Asuntos Corporativos </p>
+        <p class="no-margin">Abogada </p>
+          Universidad de Chile
+          (Enrique Barros y Cia, PPU, Marca Chile)
+      </div>
+    </div>
+  </div>
 
 
-  <!--       <section class="team-directorio">
-        <h2 class="ps-5 pt-5" style="color: aliceblue">Equipo directivo</h2>
-        <section class="container-team">
-          <div class="slide active">
-            <img
-              src="https://images.unsplash.com/photo-1679321659783-8782223b0fd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1976&q=80"
-              alt=""
-            />
-            <h2 class="title"></h2>
-          </div>
-          <div class="slide">
-            <img
-              src="https://images.unsplash.com/photo-1679321659783-8782223b0fd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1976&q=80"
-              alt=""
-            />
-            <h2 class="title"></h2>
-          </div>
-          <div class="slide">
-            <img
-              src="https://images.unsplash.com/photo-1679321659783-8782223b0fd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1976&q=80"
-              alt=""
-            />
-            <h2 class="title"></h2>
-          </div>
-          <div class="slide">
-            <img
-              src="https://images.unsplash.com/photo-1679321659783-8782223b0fd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1976&q=80"
-              alt=""
-            />
-            <h2 class="title"></h2>
-          </div>
-        </section>
-      </section> -->
-
-  <div class="container d-grid d-md-flex justify-content-md-end">
-    <button type="button" class="btn rounded-pill" style="border-color: #d76e14; color: #d76e14">
+  <div class="container d-grid d-md-flex justify-content-md-end mt-5 botones">
+    <button type="button" class="btn rounded-pill d-flex align-items-center justify-content-center"
+      style="border-color: #d76e14; color: white; height: 50px; font-size: 18px; background-color: #d76e14;">
       Descargar Organigrama
     </button>
   </div>
-  </section>
+
+
   <!-- END TEAM-->
 
   <!-- START PROYECTOS -->
-
-  <div class="container-fluid text-center" id="proyectos">
-    <h2 class="pb-5">PROYECTOS</h2>
-    <div class="row pt-4">
-      <div class="col-6 col-md-3 counter counter1" data-target="200">
-        <h2 class="counter-number">0</h2>
-        <h5>Colaboradores</h5>
+  <div class="container-fluid text-center my-5" id="proyectos">
+    <h1 class="pb-5">PROYECTOS</h1>
+    <div class="row pt-4 my-5">
+      <div class="col-6 col-md-3 counter counter1 border-right" data-target="200">
+        <h2 class="counter-number no-margin">0</h2>
+        <h3>Colaboradores</h3>
       </div>
-      <div class="col-6 col-md-3 counter counter2" data-target="90">
-        <h2 class="counter-number">0</h2>
-        <h5>Proyectos de propiedad de oEnergy</h5>
+      <div class="col-6 col-md-3 counter counter2 border-right" data-target="90">
+        <h2 class="counter-number no-margin">0</h2>
+        <h3>Proyectos de propiedad de oEnergy</h3>
       </div>
-      <div class="col-6 col-md-3 counter counter3" data-target="1200">
-        <h2 class="counter-number">0</h2>
-        <h5>MWp</h5>
+      <div class="col-6 col-md-3 counter counter3 border-right" data-target="1200">
+        <h2 class="counter-number no-margin">0</h2>
+        <h3>MWp</h3>
       </div>
       <div class="col-6 col-md-3 counter counter4" data-target="143">
-        <h2 class="counter-number">0</h2>
-        <h5>Plantas construidas por oEnergy</h5>
+        <h2 class="counter-number no-margin">0</h2>
+        <h3>Plantas construidas por oEnergy</h3>
       </div>
     </div>
   </div>
 
+
   <!-- END PROYECTOS -->
-
-
-  <section class="projects-map my-4">
-    <!-- https://pixelmap.amcharts.com -->
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="container text-center">
-            <div id="map" style="width: 100%; height: 400px; margin: auto"></div>
-          </div>
-        </div>
-        <div class="col align-items-center text-center d-flex flex-column justify-content-center">
-          <h3>Nuestra presencia geográfica en Chile</h3>
-          <p class="text-justify">
-            oEnergy ha participado, ya sea como desarrollador, constructor u
-            operador, en el 20% de los PMGDs solares existentes en Chile.
-            Nuestros proyectos tienen presencia geográfica desde la Región de
-            Coquimbo hasta la Región del Maule.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--      <div class="pdf-proyectos my-4">
-        <div class="container text-center" style="color:white">
-          <div class="row py-4">
-            <div class="col-6 ">
-              <h4>Te invitamos a saber más de nuestros proyectos</h4>
-            </div>
-            <div class="col-3 text-center">
-              <button type="button" class="btn btn-outline-light rounded-pill">
-                Descargar PDF Proyectos
-              </button>
-            </div>
-            <div class="col-3"></div>
-          </div>
-        </div>
-      </div> -->
-  </section>
 
   <footer class="footer-oenergy" style="
         color: white;
@@ -634,148 +671,15 @@
   integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
-<script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/chileLow.js"></script>
 <script src="./assets/js/main.js"></script>
+
 <script>
   // Inicializar ScrollReveal
-  ScrollReveal().reveal('.container-year', {
+  ScrollReveal().reveal(".container-year", {
     delay: 200,
-    distance: '50px',
+    distance: "50px",
     interval: 200,
-    reset: true
-  });
-</script>
-
-<script type="text/javascript">
-  AmCharts.makeChart("map", {
-    type: "map",
-    pathToImages: "http://www.amcharts.com/lib/3/images/",
-    addClassNames: true,
-    fontSize: 15,
-    color: "#FFFFFF",
-    projection: "mercator",
-    backgroundAlpha: 1,
-    backgroundColor: "rgba(80,80,80,1)",
-    dataProvider: {
-      map: "chileLow",
-      getAreasFromMap: true,
-      images: [
-        {
-          top: 40,
-          left: 60,
-          width: 80,
-          height: 40,
-          pixelMapperLogo: true,
-          imageURL: "http://pixelmap.amcharts.com/static/img/logo.svg",
-          url: "http://www.amcharts.com",
-        },
-        {
-          selectable: true,
-          title: "Proyecto 01",
-          longitude: -70.8077,
-          latitude: -30.4954,
-          svgPath:
-            "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
-          color: "rgba(75,216,181,0.8)",
-          scale: 1.1,
-        },
-        {
-          selectable: true,
-          longitude: -71.3788,
-          latitude: -35.4633,
-          svgPath:
-            "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
-          color: "rgba(75,216,181,0.8)",
-          scale: 1,
-        },
-        {
-          selectable: true,
-          longitude: -71.9499,
-          latitude: -38.4662,
-          svgPath:
-            "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
-          color: "rgba(75,216,181,0.8)",
-          scale: 1,
-        },
-        {
-          selectable: true,
-          longitude: -72.6479,
-          latitude: -39.1118,
-          svgPath:
-            "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
-          color: "rgba(75,216,181,0.8)",
-          scale: 1,
-        },
-        {
-          selectable: true,
-          longitude: -49.3605,
-          latitude: -37.6131,
-          svgPath:
-            "M3.5,13.277C3.5,6.22,9.22,0.5,16.276,0.5C23.333,0.5,29.053,6.22,29.053,13.277C29.053,14.54,28.867,15.759,28.526,16.914C26.707,24.271,16.219,32.5,16.219,32.5C16.219,32.5,4.37,23.209,3.673,15.542C3.673,15.542,3.704,15.536,3.704,15.536C3.572,14.804,3.5,14.049,3.5,13.277C3.5,13.277,3.5,13.277,3.5,13.277M16.102,16.123C18.989,16.123,21.329,13.782,21.329,10.895C21.329,8.008,18.989,5.668,16.102,5.668C13.216,5.668,10.876,8.008,10.876,10.895C10.876,13.782,13.216,16.123,16.102,16.123C16.102,16.123,16.102,16.123,16.102,16.123",
-          color: "rgba(71,140,123,0.8)",
-          scale: 1,
-        },
-      ],
-      areas: [
-        {
-          id: "CL-AR",
-          title: "Araucanía",
-          color: "rgba(71,140,123,0.8)",
-        },
-        {
-          id: "CL-ML",
-          title: "Proyecto 02",
-          color: "rgba(75,216,181,0.8)",
-        },
-      ],
-    },
-    balloon: {
-      horizontalPadding: 15,
-      borderAlpha: 0,
-      borderThickness: 1,
-      verticalPadding: 15,
-    },
-    areasSettings: {
-      color: "rgba(129,129,129,1)",
-      outlineColor: "rgba(80,80,80,1)",
-      rollOverOutlineColor: "rgba(80,80,80,1)",
-      rollOverBrightness: 20,
-      selectedBrightness: 20,
-      selectable: true,
-      unlistedAreasAlpha: 0,
-      unlistedAreasOutlineAlpha: 0,
-    },
-    imagesSettings: {
-      alpha: 1,
-      color: "rgba(129,129,129,1)",
-      outlineAlpha: 0,
-      rollOverOutlineAlpha: 0,
-      outlineColor: "rgba(80,80,80,1)",
-      rollOverBrightness: 20,
-      selectedBrightness: 20,
-      selectable: true,
-    },
-    linesSettings: {
-      color: "rgba(129,129,129,1)",
-      selectable: true,
-      rollOverBrightness: 20,
-      selectedBrightness: 20,
-    },
-    zoomControl: {
-      zoomControlEnabled: true,
-      homeButtonEnabled: false,
-      panControlEnabled: false,
-      right: 38,
-      bottom: 30,
-      minZoomLevel: 0.25,
-      gridHeight: 100,
-      gridAlpha: 0.1,
-      gridBackgroundAlpha: 0,
-      gridColor: "#FFFFFF",
-      draggerAlpha: 1,
-      buttonCornerRadius: 2,
-    },
+    reset: true,
   });
 </script>
 

@@ -17,7 +17,7 @@ const animateNumbers = () => {
 
     if (count < target) {
       counter.querySelector('.counter-number').innerText = Math.ceil(count + increment);
-      setTimeout(animateNumbers, 250);
+      setTimeout(animateNumbers, 300);
     }
   });
 };
@@ -44,18 +44,24 @@ ScrollReveal().reveal('.container-year', {
   reset: true
 });
 
+const panels = document.querySelectorAll('.director-panel');
 
-const panels = document.querySelectorAll(".panel");
+panels.forEach(panel => {
+    panel.addEventListener('click', () => {
+        // Remover la clase active de todas las tarjetas
+        panels.forEach(otherPanel => {
+            if (otherPanel !== panel) {
+                otherPanel.classList.remove('active');
+            }
+        });
 
-panels.forEach((panel) => {
-	panel.addEventListener("click", () => {
-		removeActiveClasses();
-		panel.classList.add("active");
-	});
+        // Toggle la clase active en la tarjeta clickeada
+        panel.classList.toggle('active');
+    });
 });
 
-function removeActiveClasses() {
-	panels.forEach((panel) => {
-		panel.classList.remove("active");
-	});
+
+function expandPanel(panel) {
+  panel.classList.toggle('active');
 }
+
