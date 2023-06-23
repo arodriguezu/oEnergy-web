@@ -132,6 +132,22 @@ p {
   }
 }
 
+@media (min-width: 768px) {  /* Se aplica solo en pantallas medianas y más grandes */
+  .border-md-right {
+    border-right: 1px solid #0d2436; /* ajusta el grosor y el color del borde según sea necesario */
+    position: relative;
+  }
+
+  .border-md-right::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;  /* Ajusta según sea necesario */
+    bottom: 10%; /* Ajusta según sea necesario */
+    width: 1px;
+    background: #0d2436;
+  }
+}
 
 
 
