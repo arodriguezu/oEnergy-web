@@ -359,6 +359,37 @@ p {
 
 
 
+/* QUE HACEMOS */
+
+.icon-item {
+  text-align: center;
+  margin: 10px;
+}
+
+.fa-icon {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(85, 85, 85, 0.2);
+  font-size: 70px;
+  color:  #4674b6;
+}
+
+.icon-item p {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
