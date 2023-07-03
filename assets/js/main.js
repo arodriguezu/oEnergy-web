@@ -83,25 +83,26 @@ window.addEventListener("scroll", function() {
 
 //TIMELINE
 // Selecciona todos los elementos .timeline-content
-let timelineContents = document.querySelectorAll('.timeline-content');
+let timelineItems = document.querySelectorAll('.timeline-item');
 
-timelineContents.forEach(content => {
-  // Selecciona el h2 y las etiquetas p dentro de .timeline-content
-  let h2 = content.querySelector('h2');
+timelineItems.forEach(item => {
+  let content = item.querySelector('.timeline-content');
   let pTags = content.querySelectorAll('p');
 
-  h2.addEventListener('mouseover', () => {
-    // Cuando el mouse pasa por encima del h2, remueve la clase hide-content de las etiquetas p
+  const showContent = () => {
     pTags.forEach(p => {
       p.classList.remove('hide-content');
     });
-  });
+    content.classList.remove('hide-box-shadow'); // Agregamos esta línea para mostrar el box-shadow
+  };
 
-  h2.addEventListener('mouseout', () => {
-    // Cuando el mouse sale del h2, agrega la clase hide-content a las etiquetas p
+  const hideContent = () => {
     pTags.forEach(p => {
       p.classList.add('hide-content');
     });
-  });
-});
+    content.classList.add('hide-box-shadow'); // Agregamos esta línea para ocultar el box-shadow
+  };
 
+  item.addEventListener('mouseover', showContent);
+  item.addEventListener('mouseout', hideContent);
+});

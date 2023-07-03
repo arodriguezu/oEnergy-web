@@ -66,7 +66,8 @@ p {
 .timeline {
   display: flex;
   justify-content: center;
-  padding: 50px 0 200px 0; /* Ajustar según sea necesario */
+  padding: 50px 0 360px 0; /* Ajustar según sea necesario */
+  margin-top: 20px;
 }
 
 .timeline-inner {
@@ -100,6 +101,7 @@ p {
 }
 
 .timeline-item::before {
+  display: none; /* SE AGREGA PARA NO USAR LOS CIRCULOS DEL TIMELINE Y USAR FONTAWESOME EN CLASE CIRCLE */
   content: '';
   position: absolute;
   width: 25px;
@@ -119,22 +121,21 @@ p {
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
   position: relative;
+  width: 300px;
 }
 
-.hito-arriba .timeline-content {
-  top: -30px;
-}
 
 .hito-abajo {
   flex-direction: column-reverse;
+  
 }
 
 .hito-abajo::before {
-  top: 90%;
+  top: 95%;
 }
 
 .hito-abajo .timeline-content {
-  top: 250px;
+  top: 670px;
 }
 
 .hide-content {
@@ -142,6 +143,164 @@ p {
   opacity: 0;
   transition: visibility 0.2s, opacity 0.2s linear; /* transición suave */
 }
+
+.hide-box-shadow {
+  box-shadow: none;
+}
+
+.timeline-content.timeline-custom-width {
+  width: 300px; /* Establece el ancho deseado */
+}
+
+.timeline-item.hito-1 {
+  top: 15px; /* Ajusta la posición vertical del hito específico */
+}
+
+.circle-1 {
+  position: absolute;
+  top: 124%;
+  left: 100px; /* Ajusta la posición horizontal del círculo */
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 4px solid #4674b6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-1 i {
+  font-size: 48px;
+  color: #4674b6;
+}
+
+
+.timeline-item.hito-2 {
+  top: -245px; /* Ajusta la posición vertical del hito específico */
+}
+
+.circle-2 {
+  position: absolute;
+  top: -18%;
+  left: 100px; /* Ajusta la posición horizontal del círculo */
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 4px solid #4674b6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-2 i {
+  font-size: 48px;
+  color: #4674b6;
+}
+
+
+.timeline-item.hito-3 {
+  top: 15px; /* Ajusta la posición vertical del hito específico */
+}
+
+.circle-3 {
+  position: absolute;
+  top: 124%;
+  left: 100px; /* Ajusta la posición horizontal del círculo */
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 4px solid #4674b6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-3 i {
+  font-size: 48px;
+  color: #4674b6;
+}
+
+
+.timeline-item.hito-4 {
+  top: -225px; /* Ajusta la posición vertical del hito específico */
+}
+
+.circle-4 {
+  position: absolute;
+  top: -19%;
+  left: 100px; /* Ajusta la posición horizontal del círculo */
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 4px solid #4674b6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-4 i {
+  font-size: 48px;
+  color: #4674b6;
+}
+
+
+.timeline-item.hito-5 {
+  top: -80px; /* Ajusta la posición vertical del hito específico */
+}
+
+.circle-5 {
+  position: absolute;
+  top: 113%;
+  left: 100px; /* Ajusta la posición horizontal del círculo */
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 4px solid #4674b6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-5 i {
+  font-size: 48px;
+  color: #4674b6;
+}
+
+
+.timeline-item.hito-6{
+  top: -255px; /* Ajusta la posición vertical del hito específico */
+}
+
+.circle-6 {
+  position: absolute;
+  top: -22%;
+  left: 100px; /* Ajusta la posición horizontal del círculo */
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 4px solid #4674b6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-6 i {
+  font-size: 48px;
+  color: #4674b6;
+}
+
 
 
 
