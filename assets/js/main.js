@@ -65,3 +65,43 @@ function expandPanel(panel) {
   panel.classList.toggle('active');
 }
 
+
+// Efecto de parallax al hacer scroll
+window.addEventListener("scroll", function() {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var parallaxSections = document.getElementsByClassName("parallax-section");
+
+  for (var i = 0; i < parallaxSections.length; i++) {
+    var section = parallaxSections[i];
+    var sectionOffset = section.offsetTop;
+    var yPos = (scrollTop - sectionOffset) / 2;
+
+    section.style.backgroundPositionY = yPos + "px";
+  }
+});
+
+
+//TIMELINE
+// Selecciona todos los elementos .timeline-content
+let timelineContents = document.querySelectorAll('.timeline-content');
+
+timelineContents.forEach(content => {
+  // Selecciona el h2 y las etiquetas p dentro de .timeline-content
+  let h2 = content.querySelector('h2');
+  let pTags = content.querySelectorAll('p');
+
+  h2.addEventListener('mouseover', () => {
+    // Cuando el mouse pasa por encima del h2, remueve la clase hide-content de las etiquetas p
+    pTags.forEach(p => {
+      p.classList.remove('hide-content');
+    });
+  });
+
+  h2.addEventListener('mouseout', () => {
+    // Cuando el mouse sale del h2, agrega la clase hide-content a las etiquetas p
+    pTags.forEach(p => {
+      p.classList.add('hide-content');
+    });
+  });
+});
+

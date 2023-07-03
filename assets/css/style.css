@@ -8,20 +8,20 @@ body {
 }
 
 h1 {
-  color: #d76e14;
+  color: #4774b2 ;
   font-weight: 600 !important;
   font-size: 50px !important; 
 }
 
 h2 {
-  color: #d76e14;
+  color: #4774b2 ;
   font-weight: 500 !important;
   font-size: 40px !important; 
 }
 
 h3 {
   color: black;
-  font-weight: 300 !important;
+  font-weight: 500 !important;
   font-size: 30px !important; 
 }
 
@@ -53,6 +53,163 @@ p {
   width: 200px;
   white-space: normal;
 }
+
+.title-border {
+  border-bottom: solid;
+  border-color: #d76e14;
+}
+
+
+/* TIMELINE */
+
+/* Estilos generales */
+.timeline {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 200px 0; /* Ajustar según sea necesario */
+}
+
+.timeline-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.timeline-inner::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #8d8d8d;
+  top: 90%;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 15%; /* Ajustar según sea necesario */
+  padding: 20px 0;
+  z-index: 1;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 4px solid #8d8d8d;
+  top: 90%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-content {
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.hito-arriba .timeline-content {
+  top: -30px;
+}
+
+.hito-abajo {
+  flex-direction: column-reverse;
+}
+
+.hito-abajo::before {
+  top: 90%;
+}
+
+.hito-abajo .timeline-content {
+  top: 250px;
+}
+
+.hide-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s linear; /* transición suave */
+}
+
+
+
+
+/* MISION Y VISION */
+
+
+.parallax-section {
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-section .content-mision {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(247, 247, 247, 0.2);
+
+}
+
+.mission {
+  background-image: url("/assets/img/oenergy_mision.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.mission-title {
+  font-size: 36px;
+}
+
+.mission-text {
+  font-size: 24px;
+}
+
+.vision {
+  background-image: url("/assets/img/oenergy_mision.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.vision-title {
+  font-size: 36px;
+}
+
+.vision-text {
+  font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .nuestra-historia {
   background: rgb(70, 116, 182);
@@ -315,14 +472,16 @@ p {
   font-weight: 600;
   font-size: 28px;
   margin-bottom: 2px;
+  
 }
 
 .titulo-directores {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .puesto-directores {
-  font-weight: 400;
+  font-weight: 300;
+ 
 }
 
 
@@ -432,7 +591,7 @@ body-team {
   height: 90px;
 }
 
- .timeline {
+ /* .timeline {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
@@ -468,7 +627,7 @@ body-team {
   padding: 20px;
   border-radius: 20px;
 }
-
+ */
 
 #proyectos {
   padding-top: 100px; /* Ajusta el espaciado superior según sea necesario */
