@@ -57,6 +57,7 @@ p {
 .title-border {
   border-bottom: solid;
   border-color: #d76e14;
+  
 }
 
 
@@ -164,7 +165,7 @@ p {
   width: 100px;
   height: 100px;
   background-color: white;
-  border: 4px solid #4674b6;
+  border: 4px solid #8d8d8d;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -303,60 +304,67 @@ p {
 
 
 
-
-
 /* MISION Y VISION */
 
-
-.parallax-section {
-  height: 50vh;
-  position: relative;
-  overflow: hidden;
+.container-fluid {
+  padding: 0;
 }
 
-.parallax-section .content-mision {
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+.bg-image-mision {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Ajusta la altura según sea necesario */
+}
+
+.bg-image-vision {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1629726797843-618688139f5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Ajusta la altura según sea necesario */
+  
+}
+
+
+.overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background-color: rgba(247, 247, 247, 0.2);
-
-}
-
-.mission {
-  background-image: url("/assets/img/oenergy_mision.jpeg");
-  background-size: cover;
-  background-position: center;
+  color: #fff;
+  background-color: rgba(69, 69, 69, 0.6);
+  padding: 20px;
   border-radius: 20px;
 }
 
-.mission-title {
-  font-size: 36px;
-}
-
-.mission-text {
+.overlay-title {
   font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
-.vision {
-  background-image: url("/assets/img/oenergy_mision.jpeg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
+.overlay-text {
+  font-size: 16px;
+  color:#fff;
 }
 
-.vision-title {
-  font-size: 36px;
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-
-.vision-text {
-  font-size: 24px;
-}
-
-
-
-
 
 
 /* QUE HACEMOS */
@@ -372,8 +380,8 @@ p {
   line-height: 120px;
   text-align: center;
   border-radius: 50%;
-/*   box-shadow: 0 0 0 1px rgba(85, 85, 85, 0.2); */
-  font-size: 70px;
+  box-shadow: 0 0 10px 5px rgba(85, 85, 85, 0.2);
+  font-size: 50px;
   color:  #4674b6;
 }
 
@@ -381,7 +389,16 @@ p {
   margin-top: 10px;
 }
 
+.fadeInLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
 
+.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 
 
@@ -475,6 +492,7 @@ p {
     font-size: 32px;
     text-align: center;
     font-weight: 500;
+    color: #615c5c;
   }
 }
 

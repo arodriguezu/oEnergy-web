@@ -106,3 +106,29 @@ timelineItems.forEach(item => {
   item.addEventListener('mouseover', showContent);
   item.addEventListener('mouseout', hideContent);
 });
+
+
+  // Función para verificar si un elemento está visible en la ventana
+  function isElementVisible(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Función para agregar la clase de animación cuando el elemento está visible
+  function addAnimationClass() {
+    var elements = document.querySelectorAll('.fadeInLeft');
+
+    elements.forEach(function (element) {
+      if (isElementVisible(element)) {
+        element.classList.add('animate');
+      }
+    });
+  }
+
+  // Detectar cuando se hace scroll y llamar a la función para agregar la clase de animación
+  window.addEventListener('scroll', addAnimationClass);
