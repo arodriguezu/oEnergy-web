@@ -67,7 +67,7 @@ p {
 .timeline {
   display: flex;
   justify-content: center;
-  padding: 50px 0 360px 0; /* Ajustar según sea necesario */
+  padding: 50px 0 340px 0; /* Ajustar según sea necesario */
   margin-top: 20px;
 }
 
@@ -122,7 +122,7 @@ p {
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
   position: relative;
-  width: 300px;
+  width: 350px;
 }
 
 
@@ -150,7 +150,7 @@ p {
 }
 
 .timeline-content.timeline-custom-width {
-  width: 300px; /* Establece el ancho deseado */
+  width: 320px; /* Establece el ancho deseado */
 }
 
 .timeline-item.hito-1 {
@@ -159,8 +159,8 @@ p {
 
 .circle-1 {
   position: absolute;
-  top: 124%;
-  left: 100px; /* Ajusta la posición horizontal del círculo */
+  top: 114%;
+  left: 125px; /* Ajusta la posición horizontal del círculo */
   transform: translateY(-50%);
   width: 100px;
   height: 100px;
@@ -174,18 +174,18 @@ p {
 
 .circle-1 i {
   font-size: 48px;
-  color: #4674b6;
+  color: grey;
 }
 
 
 .timeline-item.hito-2 {
-  top: -245px; /* Ajusta la posición vertical del hito específico */
+  top: -340px; /* Ajusta la posición vertical del hito específico */
 }
 
 .circle-2 {
   position: absolute;
-  top: -18%;
-  left: 100px; /* Ajusta la posición horizontal del círculo */
+  top: -13%;
+  left: 128px; /* Ajusta la posición horizontal del círculo */
   transform: translateY(-50%);
   width: 100px;
   height: 100px;
@@ -199,7 +199,7 @@ p {
 
 .circle-2 i {
   font-size: 48px;
-  color: #d76e14;
+  color: grey;
 }
 
 
@@ -209,8 +209,8 @@ p {
 
 .circle-3 {
   position: absolute;
-  top: 124%;
-  left: 100px; /* Ajusta la posición horizontal del círculo */
+  top: 115%;
+  left: 120px; /* Ajusta la posición horizontal del círculo */
   transform: translateY(-50%);
   width: 100px;
   height: 100px;
@@ -224,18 +224,18 @@ p {
 
 .circle-3 i {
   font-size: 48px;
-  color: #4674b6;
+  color: grey;
 }
 
 
 .timeline-item.hito-4 {
-  top: -225px; /* Ajusta la posición vertical del hito específico */
+  top: -340px; /* Ajusta la posición vertical del hito específico */
 }
 
 .circle-4 {
   position: absolute;
-  top: -19%;
-  left: 100px; /* Ajusta la posición horizontal del círculo */
+  top: -13%;
+  left: 125px; /* Ajusta la posición horizontal del círculo */
   transform: translateY(-50%);
   width: 100px;
   height: 100px;
@@ -249,18 +249,18 @@ p {
 
 .circle-4 i {
   font-size: 48px;
-  color: #4674b6;
+  color: grey;
 }
 
 
 .timeline-item.hito-5 {
-  top: -80px; /* Ajusta la posición vertical del hito específico */
+  top: -45px; /* Ajusta la posición vertical del hito específico */
 }
 
 .circle-5 {
   position: absolute;
-  top: 113%;
-  left: 100px; /* Ajusta la posición horizontal del círculo */
+  top: 109%;
+  left: 126px; /* Ajusta la posición horizontal del círculo */
   transform: translateY(-50%);
   width: 100px;
   height: 100px;
@@ -274,18 +274,18 @@ p {
 
 .circle-5 i {
   font-size: 48px;
-  color: #4674b6;
+  color: grey;
 }
 
 
 .timeline-item.hito-6{
-  top: -255px; /* Ajusta la posición vertical del hito específico */
+  top: -365px; /* Ajusta la posición vertical del hito específico */
 }
 
 .circle-6 {
   position: absolute;
-  top: -22%;
-  left: 100px; /* Ajusta la posición horizontal del círculo */
+  top: -15%;
+  left: 125px; /* Ajusta la posición horizontal del círculo */
   transform: translateY(-50%);
   width: 100px;
   height: 100px;
@@ -299,6 +299,30 @@ p {
 
 .circle-6 i {
   font-size: 48px;
+  color: grey;
+}
+
+.circle {
+  border: 3px solid grey;
+}
+
+.fa {
+  color: grey;
+}
+
+.circle.blue {
+  border-color: #4674b6;
+}
+
+.fa.blue {
+  color: #4674b6 !important;
+}
+
+.fa-solid {
+  color: grey;
+}
+
+.fa-solid.blue {
   color: #4674b6;
 }
 

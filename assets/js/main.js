@@ -81,31 +81,38 @@ window.addEventListener("scroll", function() {
 });
 
 
-//TIMELINE
-// Selecciona todos los elementos .timeline-content
-let timelineItems = document.querySelectorAll('.timeline-item');
 
-timelineItems.forEach(item => {
-  let content = item.querySelector('.timeline-content');
+//TIMELINE 
+let circleItems = document.querySelectorAll('.circle');
+
+circleItems.forEach(circle => {
+  let content = circle.parentNode;
   let pTags = content.querySelectorAll('p');
+  let icon = circle.querySelector('.fa'); // Selecciona el icono dentro del círculo
 
   const showContent = () => {
     pTags.forEach(p => {
       p.classList.remove('hide-content');
     });
-    content.classList.remove('hide-box-shadow'); // Agregamos esta línea para mostrar el box-shadow
+    content.classList.remove('hide-box-shadow'); 
+    circle.style.borderColor = "#4674b6";  // Cambia el color del borde del círculo
+    if (icon) icon.style.color = "#4674b6";  // Cambia el color del icono
   };
 
   const hideContent = () => {
     pTags.forEach(p => {
       p.classList.add('hide-content');
     });
-    content.classList.add('hide-box-shadow'); // Agregamos esta línea para ocultar el box-shadow
+    content.classList.add('hide-box-shadow');
+    circle.style.borderColor = "grey";  // Cambia el color del borde del círculo a gris
+    if (icon) icon.style.color = "grey";  // Cambia el color del icono a gris
   };
 
-  item.addEventListener('mouseover', showContent);
-  item.addEventListener('mouseout', hideContent);
+  circle.addEventListener('mouseover', showContent);
+  circle.addEventListener('mouseout', hideContent);
 });
+
+
 
 
   // Función para verificar si un elemento está visible en la ventana
