@@ -367,3 +367,24 @@
     right: 0;
   }
   
+
+  /* EQUIPO DIRECTIVO */
+  .person-photo-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .person-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  .person-details {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  
+  
+  

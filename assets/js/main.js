@@ -139,3 +139,6 @@ circleItems.forEach(circle => {
 
   // Detectar cuando se hace scroll y llamar a la función para agregar la clase de animación
   window.addEventListener('scroll', addAnimationClass);
+
+
+  
