@@ -7,6 +7,8 @@ slideElements.forEach((slide) => {
   });
 });
 
+
+/* COUNTERS */
 const counters = document.querySelectorAll('.counter');
 
 const animateNumbers = () => {
@@ -44,44 +46,9 @@ ScrollReveal().reveal('.container-year', {
   reset: true
 });
 
-const panels = document.querySelectorAll('.director-panel');
-
-panels.forEach(panel => {
-    panel.addEventListener('click', () => {
-        // Remover la clase active de todas las tarjetas
-        panels.forEach(otherPanel => {
-            if (otherPanel !== panel) {
-                otherPanel.classList.remove('active');
-            }
-        });
-
-        // Toggle la clase active en la tarjeta clickeada
-        panel.classList.toggle('active');
-    });
-});
 
 
-function expandPanel(panel) {
-  panel.classList.toggle('active');
-}
 
-
-// Efecto de parallax al hacer scroll
-window.addEventListener("scroll", function() {
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  var parallaxSections = document.getElementsByClassName("parallax-section");
-
-  for (var i = 0; i < parallaxSections.length; i++) {
-    var section = parallaxSections[i];
-    var sectionOffset = section.offsetTop;
-    var yPos = (scrollTop - sectionOffset) / 2;
-
-    section.style.backgroundPositionY = yPos + "px";
-  }
-});
-
-
-console.log("script loaded")
 //TIMELINE 
 let circleItems = document.querySelectorAll('.circle');
 
@@ -182,3 +149,40 @@ circleItems.forEach(circle => {
         },
     },
   });
+
+
+  //MAPA
+// Obtener elementos del DOM
+const pins = document.querySelectorAll('.pin');
+const pinSelect = document.getElementById('pin-select');
+
+// Agregar evento de cambio al seleccionar un pin
+pinSelect.addEventListener('change', function() {
+  const selectedPins = Array.from(this.selectedOptions).map(option => option.value);
+  
+  // Ocultar todos los pines
+  pins.forEach(pin => pin.classList.add('hidden'));
+  
+  // Mostrar los pines seleccionados
+  selectedPins.forEach(pinId => {
+    const pin = document.querySelector(`[data-pin-id="${pinId}"]`);
+    if (pin) {
+      pin.classList.remove('hidden');
+    }
+  });
+});
+
+  
+
+
+
+  // Inicializa el mapa
+  
+  var map = L.map('map').setView([-33.4372, -70.6506], 3);
+  console.log(map);
+  
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 100,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  
