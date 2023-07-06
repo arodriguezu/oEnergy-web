@@ -212,6 +212,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
   }
   
   .circle-1 i {
@@ -387,6 +388,7 @@ h3 {
   
   .circle {
     border: 3px solid grey;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
   }
   
   .fa {
@@ -732,7 +734,7 @@ h3 {
     left: -140px; /* Ajusta este valor para moverla hacia arriba según tus necesidades */
     z-index: 2;
     background-color: white;
-    height: 300px;
+    height: 325px;
   }
   
   .imagen-proyectos {
