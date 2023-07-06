@@ -5,6 +5,13 @@
     padding: 0;
   }
 
+  .center-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar {
     background-color: transparent !important;
   }
