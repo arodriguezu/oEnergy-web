@@ -694,20 +694,20 @@ h3 {
 
   /* CONTACTANOS */
  .contact-section {
-  background-image: url("https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+  background-image: 
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+  url("https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
 }
 
 .contact-form-container {
   width: 600px;
   padding: 25px;
-  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   border-radius: 20px;
 }
@@ -723,12 +723,18 @@ h3 {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
-  border: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #0d2436;
   margin-bottom: 10px;
+  background-color: transparent;
+  border-radius: 0px;
+
 }
 
 .contact-form button {
-  width: 100%;
+  width: 120px;
   background-color: #4CAF50;
   color: white;
   padding: 10px;
