@@ -201,7 +201,7 @@ h3 {
 
   .circle-1 {
     position: absolute;
-    top: 105%;
+    top: 108%;
     left: 175px; /* Ajusta la posición horizontal del círculo */
     transform: translateY(-50%);
     width: 100px;
@@ -233,6 +233,10 @@ h3 {
 
   .image-container-2{
     left: 1%;
+  }
+
+  .timeline-year{
+    color: #4674b6;
   }
 
   .circle-2 {
@@ -268,7 +272,7 @@ h3 {
 
   .circle-3 {
     position: absolute;
-    top: 105%;
+    top: 108%;
     left: 175px; /* Ajusta la posición horizontal del círculo */
     transform: translateY(-50%);
     width: 100px;
@@ -333,7 +337,7 @@ h3 {
 
   .circle-5 {
     position: absolute;
-    top: 105%;
+    top: 108%;
     left: 175px; /* Ajusta la posición horizontal del círculo */
     transform: translateY(-50%);
     width: 100px;
@@ -643,12 +647,16 @@ h3 {
   }
   
   .person-photo {
-    width: 100%;
-    max-width: 300px;
+    width: 220px;
+    max-width: 250px;
     height: auto;
     border-radius: 20px;
   }
   
+.gerente-nombre {
+  font-size: 32px !important;
+}
+
   .person-details {
     text-align: center;
     margin-top: 30px;
@@ -663,7 +671,15 @@ h3 {
     color: #0d2436;
   }
 
+  .zoom {
+    transition: transform 0.2s; /* Animation */
+  }
   
+  .zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  
+
 
   /* SLIDER GERENCIA */
   .carousel-item {
@@ -766,5 +782,32 @@ h3 {
   .pin.hidden {
     opacity: 0;
     pointer-events: none;
+  }
+  
+  .pin-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .styled-select {
+    width: 250px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+  }
+  
+  .styled-select option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .styled-select:hover,
+  .styled-select:focus {
+    outline: none;
+    border-color: #007bff;
   }
   
