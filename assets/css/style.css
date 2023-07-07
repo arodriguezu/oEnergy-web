@@ -20,7 +20,6 @@ h1{
     color: #d76e14;
     font-weight: 600 !important;
     font-size: 48px !important; 
-    font
 }
 
 h2 {
@@ -691,6 +690,29 @@ h3 {
     top: -20px;
   }
 
+  .carousel-control-prev, .carousel-control-next {
+    position: absolute !important;
+    top: 10% !important; /* ajusta esto a la altura deseada */
+    z-index: 1 !important; /* para asegurarse de que los botones aparezcan encima de los elementos del carousel */
+  }
+  
+  .carousel-control-prev {
+    left: -75px !important; /* ajusta esto a la distancia deseada desde la izquierda */
+  }
+  
+  .carousel-control-next {
+    right: -75px !important; /* ajusta esto a la distancia deseada desde la derecha */
+  }
+  
+  #personCarousel {
+    position: relative; /* Esto puede no ser necesario si ya está establecido */
+    overflow: visible;
+  }
+
+  .carousel-container {
+    position: relative;
+    overflow: hidden; /* hide the parts of the prev/next buttons that overflow the carousel */
+  }
 
   /* CONTACTANOS */
  .contact-section {
