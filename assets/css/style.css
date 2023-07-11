@@ -461,6 +461,36 @@ h3 {
 
 
   /* MISION y VISION */
+  .overlay-container {
+    position: relative;
+    min-height: 400px;
+  }
+  
+  .overlay-div {
+    position: absolute;
+    width: 100%;  // Asegúrate de que el div ocupe todo el ancho disponible
+  }
+  
+  .overlay-div-bottom {
+    z-index: 1;
+    top: 0;
+    left: 0px;
+    
+  }
+  
+  .overlay-div-top {
+    z-index: 2;
+    top: 50px;
+    left: 410px;  // Puedes ajustar este valor para cambiar cuánto se superpone el div de la visión al de la misión
+  }
+  
+
+
+
+
+/* ------------------- */
+
+
   .image-container-mision {
     position: relative;
     display: inline-block;
@@ -527,6 +557,9 @@ h3 {
   }
 
 
+
+
+  
 /* VALORES */
 .valores {
   background: rgb(255, 255, 255);
@@ -598,6 +631,12 @@ h3 {
 
 
 /* NUESTRO EQUIPO */
+
+.nuestro-equipo {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 40%, rgba(13, 36, 54, 1) 100%);
+}
+
 .team-section {
   background: #fff;
   padding: 60px 0;
