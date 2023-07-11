@@ -392,7 +392,12 @@ h3 {
   .circle {
     border: 3px solid grey;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+    
   }
+
+  .div-interfering {
+    pointer-events: none;
+}
   
   .fa {
     color: grey;
@@ -515,52 +520,106 @@ h3 {
     
   }
   
+  @media (max-width: 767.98px) {
+    .smaller-image {
+      max-width: 200px o !important;
+    }
+  }
+
 
 /* VALORES */
-.custom-card {
-    display: flex;
-    position: relative;
-    min-height: 350px; /* Ajusta la altura según tus necesidades */
-  }
-  
-  .custom-card .icon-container {
-    display: flex;
-    height: 100px;
-  }
-  
-  .custom-card .custom-icon {
-    width: 200px; /* Ajusta el tamaño del icono según tus necesidades */
-    height: 200px; /* Ajusta el tamaño del icono según tus necesidades */
-  }
-  
-  .custom-card .custom-text-valores {
-    margin-top: 10px; /* Ajusta el espacio entre el icono y el texto según tus necesidades */
-  }
+.valores {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 40%, rgba(13, 36, 54, 1) 100%);
+}
 
-  
-  .description {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 20px;
-    transition: opacity 0.3s ease;
-    overflow: auto; /* Agrega un desplazamiento si el contenido es largo */
-  }
-  
-  .custom-card:hover .description {
-    display: block;
-  }
-  
-  .custom-card:hover .custom-text-valores,
-  .custom-card:hover .custom-icon {
-    opacity: 0.5;
-  }
-  
+.valores h1 {
+  margin: 0 auto;
+  width: 50%;
+  border-bottom: 3px solid;
+}
+
+.custom-card {
+  display: flex;
+  position: relative;
+  min-height: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.6s ease;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.custom-card .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.custom-card .custom-icon {
+  width: 100px;
+  height: 100px;
+  fill: #4674b6;
+}
+
+.custom-card .card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.custom-card .card-title {
+  color: #0d2436;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.custom-card .description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  overflow: auto;
+}
+
+.custom-card:hover .description {
+  opacity: 1;
+}
+
+
+
+/* NUESTRO EQUIPO */
+.team-section {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.team-section h1 {
+  margin-bottom: 40px;
+}
+
+.team-section p {
+  font-size: 20px;
+}
+
+
+.carousel-item img {
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+
+
 
   /* EQUIPO DIRECTIVO */
   .director-container {
@@ -837,5 +896,117 @@ h3 {
   .styled-select:focus {
     outline: none;
     border-color: #007bff;
+  }
+  
+  .round-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  .round-checkbox:checked {
+    border-color: #007bff;
+  }
+  
+  .round-checkbox:checked:active,
+  .round-checkbox.checked {
+    background-color: #007bff;
+  }
+  
+  .developer-pin {
+    color: red;
+  }
+  
+  .constructor-pin {
+    color: blue;
+  }
+  
+  .operator-pin {
+    color: green;
+  }
+  
+  /* Estilos adicionales */
+  .round-checkbox:focus {
+    box-shadow: 0 0 3px #007bff;
+  }
+
+  @media (max-width: 768px) {
+    /* Estilos para dispositivos con un ancho máximo de 768px, como teléfonos móviles */
+    .developer-pin {
+      color: red;
+      /* Ajusta la posición de los pines de desarrollador según sea necesario */
+      left: 220px;
+      top: 120px;
+    }
+  
+    .constructor-pin {
+      color: blue;
+      /* Ajusta la posición de los pines de constructor según sea necesario */
+      left: 210px;
+      top: 130px;
+    }
+  
+    .operator-pin {
+      color: green;
+      /* Ajusta la posición de los pines de operador según sea necesario */
+      left: 200px;
+      top: 140px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 992px) {
+    /* Estilos para dispositivos con un ancho mínimo de 769px y un ancho máximo de 992px, como tablets en modo horizontal */
+    .developer-pin {
+      color: red;
+      /* Ajusta la posición de los pines de desarrollador según sea necesario */
+      left: 230px;
+      top: 90px;
+    }
+  
+    .constructor-pin {
+      color: blue;
+      /* Ajusta la posición de los pines de constructor según sea necesario */
+      left: 240px;
+      top: 100px;
+    }
+  
+    .operator-pin {
+      color: green;
+      /* Ajusta la posición de los pines de operador según sea necesario */
+      left: 250px;
+      top: 110px;
+    }
+  }
+  
+  @media (min-width: 993px) {
+    /* Estilos para dispositivos con un ancho mínimo de 993px, como pantallas de escritorio */
+    .developer-pin {
+      color: red;
+      /* Ajusta la posición de los pines de desarrollador según sea necesario */
+      left: 1040px;
+      top: 80px;
+    }
+  
+    .constructor-pin {
+      color: blue;
+      /* Ajusta la posición de los pines de constructor según sea necesario */
+      left: 230px;
+      top: 150px;
+    }
+  
+    .operator-pin {
+      color: green;
+      /* Ajusta la posición de los pines de operador según sea necesario */
+      left: 220px;
+      top: 170px;
+    }
   }
   

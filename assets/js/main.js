@@ -19,7 +19,7 @@ const animateNumbers = () => {
 
     if (count < target) {
       counter.querySelector('.counter-number').innerText = Math.ceil(count + increment);
-      setTimeout(animateNumbers, 300);
+      setTimeout(animateNumbers, 1000);
     }
   });
 };
@@ -68,8 +68,8 @@ circleItems.forEach(circle => {
       imageContainerPTags.forEach(p => p.classList.remove('hide-content')); // Muestra los párrafos dentro del contenedor de la imagen
     }
     content.classList.remove('hide-box-shadow'); 
-    circle.style.borderColor = "#4674b6";  // Cambia el color del borde del círculo
-    if (icon) icon.style.color = "#4674b6";  // Cambia el color del icono
+    circle.style.borderColor = "#d76e14";  // Cambia el color del borde del círculo
+    if (icon) icon.style.color = "#d76e14";  // Cambia el color del icono
   };
 
   const hideContent = () => {
@@ -119,59 +119,65 @@ circleItems.forEach(circle => {
   window.addEventListener('scroll', addAnimationClass);
 
 
-  //SLIDER
-  var swiper = new Swiper(".slide-content", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints:{
-        0: {
-            slidesPerView: 1,
-        },
-        520: {
-            slidesPerView: 2,
-        },
-        950: {
-            slidesPerView: 3,
-        },
-    },
-  });
-
-
   //MAPA
-// Obtener elementos del DOM
-const pins = document.querySelectorAll('.pin');
-const pinSelect = document.getElementById('pin-select');
-
-// Agregar evento de cambio al seleccionar un pin
-pinSelect.addEventListener('change', function() {
-  const selectedPins = Array.from(this.selectedOptions).map(option => option.value);
+  $(document).ready(function() {
+    $('#developer-checkbox').change(function() {
+      if(this.checked) {
+        $('.developer-pin').removeClass('hidden');
+      } else {
+        $('.developer-pin').addClass('hidden');
+      }
+    });
+    
+    $('#constructor-checkbox').change(function() {
+      if(this.checked) {
+        $('.constructor-pin').removeClass('hidden');
+      } else {
+        $('.constructor-pin').addClass('hidden');
+      }
+    });
   
-  // Ocultar todos los pines
-  pins.forEach(pin => pin.classList.add('hidden'));
+    $('#operator-checkbox').change(function() {
+      if(this.checked) {
+        $('.operator-pin').removeClass('hidden');
+      } else {
+        $('.operator-pin').addClass('hidden');
+      }
+    });
+  });
   
-  // Mostrar los pines seleccionados
-  selectedPins.forEach(pinId => {
-    const pin = document.querySelector(`[data-pin-id="${pinId}"]`);
-    if (pin) {
-      pin.classList.remove('hidden');
+  $(document).ready(function() {
+    $('.round-checkbox').change(function() {
+      if (this.checked) {
+        $(this).addClass('checked');
+        var checkboxId = $(this).attr('id');
+        var pinColor = getPinColor(checkboxId);
+        $(this).css('border-color', pinColor);
+        $(this).css('background-color', pinColor);
+      } else {
+        $(this).removeClass('checked');
+        $(this).css('border-color', '#ccc');
+        $(this).css('background-color', 'transparent');
+      }
+    });
+  
+    function getPinColor(checkboxId) {
+      var pinColor = '';
+      switch (checkboxId) {
+        case 'developer-checkbox':
+          pinColor = 'red';
+          break;
+        case 'constructor-checkbox':
+          pinColor = 'blue';
+          break;
+        case 'operator-checkbox':
+          pinColor = 'green';
+          break;
+        // Agrega más casos según sea necesario para otros tipos de checkbox
+      }
+      return pinColor;
     }
   });
-});
-
   
 
 
