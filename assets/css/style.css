@@ -3,7 +3,10 @@
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
+    
   }
+
+  
 
   .center-section {
     display: flex;
@@ -468,7 +471,7 @@ h3 {
   
   .overlay-div {
     position: absolute;
-    width: 100%;  // Asegúrate de que el div ocupe todo el ancho disponible
+    width: 100%;  /* // Asegúrate de que el div ocupe todo el ancho disponible */
   }
   
   .overlay-div-bottom {
@@ -481,7 +484,7 @@ h3 {
   .overlay-div-top {
     z-index: 2;
     top: 50px;
-    left: 410px;  // Puedes ajustar este valor para cambiar cuánto se superpone el div de la visión al de la misión
+    left: 410px;  /* // Puedes ajustar este valor para cambiar cuánto se superpone el div de la visión al de la misión */
   }
   
 

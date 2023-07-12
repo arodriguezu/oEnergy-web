@@ -1,0 +1,166 @@
+.section-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 90%; /* O el porcentaje que prefieras */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: auto;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.icon-container .icon {
+    position: relative;
+    z-index: 2;
+}
+
+.icon-container i {
+
+    border: 2px solid gray;
+    border-radius: 50%;
+    padding: 15px; /* Ajusta este valor según sea necesario */
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-size: 32px; /* Ajusta este valor según sea necesario */
+    color: gray;
+    text-align: center; /* Para alinear el ícono horizontalmente */
+    line-height: 1; /* Para alinear el ícono verticalmente */
+    height: 70px; /* Asegúrate de que esta sea la misma que la anchura */
+    width: 70px; /* Asegúrate de que esta sea la misma que la altura */
+    display: flex; /* Añadido para ayudar a centrar el ícono */
+    justify-content: center; /* Centra el ícono horizontalmente */
+    align-items: center; /* Centra el ícono verticalmente */
+}
+
+.icon-container i::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.icon-container .hover-info {
+    display: none;
+    position: absolute;
+    width: auto;
+    z-index: 3;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    
+}
+
+.icon-container .hover-info .info-content {
+    padding: 20px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.icon-container .hover-info .info-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+
+.icon-container .icon:hover .hover-info {
+    display: block;
+}
+
+.icon-container .hover-info-top {
+    bottom: 70px;
+}
+
+.icon-container .hover-info-bottom {
+    top: 70px;
+}
+
+.line {
+    position: absolute;
+    height: 1px;
+    background-color:grey;
+    width: 100%;
+    z-index: 1;
+}
+
+.year {
+    font-size: 1.2em;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+}
+
+.year-top {
+    top: -30px;
+}
+
+.year-bottom {
+    bottom: -30px;
+}
+
+
+.icon-container .hover-info .info-content {
+    padding: 20px;
+    box-sizing: border-box;
+    background-size: cover; /* O 'contain', dependiendo de lo que prefieras */
+    background-position: center;
+    color: white;
+    width: 300px;
+    min-height: 200px;
+    position: relative;
+     /* Ajusta este valor dependiendo de la relación de aspecto de la imagen */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     height: 100%;
+     border-radius: 20px;
+}
+
+.icon-container .hover-info .info-content .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(248, 246, 246, 0.1);
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.icon-container .hover-info .info-content .text-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+}
+
+.icon-container .icon:hover i {
+    color: orange; /* Cambia el color del ícono aquí */
+    border-color: orange; /* Cambia el color del borde aquí */
+}
