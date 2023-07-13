@@ -1,0 +1,106 @@
+/* COUNTERS */
+const counters = document.querySelectorAll('.counter');
+
+const animateNumbers = (counter, index) => {
+  const target = +counter.getAttribute('data-target');
+  const countElement = counter.querySelector('.counter-number');
+  let count = +countElement.innerText.replace(' Mwp', '');
+
+  if (count < target) {
+    count++;
+    countElement.innerText = (index === 0 || index === 2) ? `${count} Mwp` : count;
+    setTimeout(() => animateNumbers(counter, index), 10);
+  }
+};
+
+const checkScroll = () => {
+  const triggers = Array.from(document.querySelectorAll('.counter'));
+  const windowHeight = window.innerHeight;
+
+  triggers.forEach((trigger, index) => {
+    const triggerTop = trigger.getBoundingClientRect().top;
+
+    if (triggerTop < windowHeight) {
+      animateNumbers(trigger, index);
+    }
+  });
+};
+
+window.addEventListener('scroll', checkScroll);
+
+
+
+//MAPA
+$(document).ready(function() {
+  $('#developer-checkbox').change(function() {
+    if(this.checked) {
+      $('.developer-pin').removeClass('hidden');
+    } else {
+      $('.developer-pin').addClass('hidden');
+    }
+  });
+  
+  $('#constructor-checkbox').change(function() {
+    if(this.checked) {
+      $('.constructor-pin').removeClass('hidden');
+    } else {
+      $('.constructor-pin').addClass('hidden');
+    }
+  });
+
+  $('#operator-checkbox').change(function() {
+    if(this.checked) {
+      $('.operator-pin').removeClass('hidden');
+    } else {
+      $('.operator-pin').addClass('hidden');
+    }
+  });
+});
+
+$(document).ready(function() {
+  $('.round-checkbox').change(function() {
+    if (this.checked) {
+      $(this).addClass('checked');
+      var checkboxId = $(this).attr('id');
+      var pinColor = getPinColor(checkboxId);
+      $(this).css('border-color', pinColor);
+      $(this).css('background-color', pinColor);
+    } else {
+      $(this).removeClass('checked');
+      $(this).css('border-color', '#ccc');
+      $(this).css('background-color', 'transparent');
+    }
+  });
+
+  function getPinColor(checkboxId) {
+    var pinColor = '';
+    switch (checkboxId) {
+      case 'developer-checkbox':
+        pinColor = 'red';
+        break;
+      case 'constructor-checkbox':
+        pinColor = 'blue';
+        break;
+      case 'operator-checkbox':
+        pinColor = 'green';
+        break;
+      // Agrega más casos según sea necesario para otros tipos de checkbox
+    }
+    return pinColor;
+  }
+});
+
+
+
+
+// Inicializa el mapa
+
+var map = L.map('map').setView([-33.4372, -70.6506], 3);
+console.log(map);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 100,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+
