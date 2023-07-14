@@ -75,13 +75,13 @@ $(document).ready(function() {
     var pinColor = '';
     switch (checkboxId) {
       case 'developer-checkbox':
-        pinColor = 'red';
+        pinColor = '#223169';
         break;
       case 'constructor-checkbox':
-        pinColor = 'blue';
+        pinColor = '#333';
         break;
       case 'operator-checkbox':
-        pinColor = 'green';
+        pinColor = '#d76e14';
         break;
       // Agrega más casos según sea necesario para otros tipos de checkbox
     }
@@ -126,3 +126,30 @@ console.log("Resolución de pantalla: " + screenWidth + "x" + screenHeight);
        const tooltips = document.querySelectorAll('.tooltip-que-hacemos');
        tooltips.forEach(tooltip => adjustTooltipPosition(tooltip));
    });
+
+
+
+   $(document).ready(function() {
+    // Manejo de clics en los enlaces de anclaje en la misma página
+    $('a').click(function(event){
+        var href = $.attr(this, 'href');
+        
+        // Verifica si el enlace es a una ancla en la misma página
+        if (href.startsWith('#')) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: $(href).offset().top - 50 // reemplaza 50 con la altura de tu navbar
+            }, 500);
+        }
+    });
+
+    // Manejo de desplazamiento a una ancla al cargar la página
+    if(window.location.hash) {
+        setTimeout(function() {
+            $('html, body').animate({
+                scrollTop: $(window.location.hash).offset().top - 50 // reemplaza 50 con la altura de tu navbar
+            }, 500);
+        }, 0);
+    }
+});
+

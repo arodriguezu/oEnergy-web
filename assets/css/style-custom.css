@@ -55,7 +55,6 @@ h2 {
 }
 
 .icon-container i {
-
     border: 3px solid #223169;
     border-radius: 50%;
     padding: 15px; /* Ajusta este valor según sea necesario */
@@ -87,7 +86,7 @@ h2 {
 }
 
 .icon-container .hover-info {
-    display: none;
+    opacity: 0;
     position: absolute;
     width: auto;
     z-index: 3;
@@ -95,7 +94,7 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    
+    transition: opacity 0.6s ease-in-out;
 }
 
 .icon-container .hover-info .info-content {
@@ -118,7 +117,8 @@ h2 {
 }
 
 .icon-container .icon:hover .hover-info {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .icon-container .hover-info-top {
@@ -146,7 +146,6 @@ h2 {
     font-weight: 500;
     line-height: 48px;
     color: #223169;
-
 }
 
 .year-top {
@@ -157,22 +156,20 @@ h2 {
     bottom: -40px;
 }
 
-
 .icon-container .hover-info .info-content {
     padding: 20px;
     box-sizing: border-box;
-    background-size: cover; /* O 'contain', dependiendo de lo que prefieras */
+    background-size: cover;
     background-position: center;
     color: white;
     width: 300px;
     min-height: 200px;
     position: relative;
-     /* Ajusta este valor dependiendo de la relación de aspecto de la imagen */
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     height: 100%;
-     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-radius: 20px;
 }
 
 .icon-container .hover-info .info-content .overlay {
@@ -195,10 +192,9 @@ h2 {
 }
 
 .icon-container .icon:hover i {
-    color: #F87C22; /* Cambia el color del ícono aquí */
-    border-color: #F87C22; /* Cambia el color del borde aquí */
+    color: #d76e14; /* Cambia el color del ícono aquí */
+    border-color: #d76e14; /* Cambia el color del borde aquí */
 }
-
 
 @media (max-width: 1370px) {
     .section-container {
@@ -206,8 +202,6 @@ h2 {
     }
   }
   
-
-
 
 
   
@@ -263,20 +257,28 @@ h2 {
     left: 60%; /* Centramos horizontalmente */
     transform: translate(-50%, -50%); /* Aseguramos que el centro del overlay coincida con el centro del icono */
     width: 400px;
-    max-width: 500px; /* Ajusta el ancho según sea necesario */
-    height: 400px; /* Ajusta la altura según sea necesario */
-    background-color: rgba(255, 255, 255, 0.8); /* Ajusta el color y la opacidad como desees */
-    color: #223169; /* Ajusta el color del texto como desees */
+    max-width: 450px; /* Ajusta el ancho según sea necesario */
+    height: 300px; /* Ajusta la altura según sea necesario */
+    background-color: rgba(255, 255, 255, 0.9); /* Ajusta el color y la opacidad como desees */
+    color: #6D6969;
+     /* Ajusta el color del texto como desees */
+    font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; /* Alineamos el texto al centro */
     padding: 20px; /* Añadimos algo de relleno */
     opacity: 0; /* inicialmente oculto */
-    transition: opacity 0.3s ease; /* animación opcional */
+    transition: opacity 0.6s ease; /* animación opcional */
     overflow: auto; /* Aseguramos que se pueda hacer scroll si el contenido es muy largo */
     border-radius: 20px; /* Añadimos bordes redondeados para estilización */
     z-index: 2;
+  }
+
+ 
+
+  .icon-overlay .icon-first-overlay {
+    height: 320px;
   }
   
   .icon-custom-que-hacemos:hover .icon-overlay {
@@ -467,6 +469,13 @@ h2 {
     position: relative;
     height: 100vh; /* Ajusta la altura según tus necesidades */
   }
+
+  @media screen and (min-width: 1401px) {
+    .our-team {
+        height: 70vh;
+    }
+  }
+  
   
   .our-carousel {
     position: absolute;
@@ -475,6 +484,9 @@ h2 {
     width: 100%;
     height: 100%;
   }
+
+
+
   
   .our-carousel-item {
     height: 100%;
@@ -498,6 +510,14 @@ h2 {
     height: 310px;
     border-radius: 20px;
   }
+
+  @media screen and (min-width: 1401px) {
+    .our-team .our-team-overlay {
+      top: 30%; /* Ajusta a tu gusto */
+      left: 80%; /* Ajusta a tu gusto */
+    }
+  }
+  
   
   .our-team .our-team-overlay h1{
     color: #223169;
@@ -651,7 +671,7 @@ h2 {
   
   .pin {
     position: absolute;
-    color: red; /* Color del pin */
+    color: #223169; /* Color del pin */
     font-size: 20px; /* Tamaño del pin */
     cursor: pointer;
     transition: opacity 0.3s ease-in-out;
@@ -713,15 +733,15 @@ h2 {
   }
   
   .developer-pin {
-    color: red;
+    color:#223169;
   }
   
   .constructor-pin {
-    color: blue;
+    color: #333;
   }
   
   .operator-pin {
-    color: green;
+    color: #d76e14;
   }
   
   /* Estilos adicionales */
@@ -732,21 +752,21 @@ h2 {
   @media (max-width: 768px) {
     /* Estilos para dispositivos con un ancho máximo de 768px, como teléfonos móviles */
     .developer-pin {
-      color: red;
+      color: #223169;
       /* Ajusta la posición de los pines de desarrollador según sea necesario */
       left: 220px;
       top: 120px;
     }
   
     .constructor-pin {
-      color: blue;
+      color: #333;
       /* Ajusta la posición de los pines de constructor según sea necesario */
       left: 210px;
       top: 130px;
     }
   
     .operator-pin {
-      color: green;
+      color: #d76e14;
       /* Ajusta la posición de los pines de operador según sea necesario */
       left: 200px;
       top: 140px;
@@ -756,21 +776,21 @@ h2 {
   @media (min-width: 769px) and (max-width: 992px) {
     /* Estilos para dispositivos con un ancho mínimo de 769px y un ancho máximo de 992px, como tablets en modo horizontal */
     .developer-pin {
-      color: red;
+      color: #223169;
       /* Ajusta la posición de los pines de desarrollador según sea necesario */
       left: 230px;
       top: 90px;
     }
   
     .constructor-pin {
-      color: blue;
+      color: #333;
       /* Ajusta la posición de los pines de constructor según sea necesario */
       left: 240px;
       top: 100px;
     }
   
     .operator-pin {
-      color: green;
+      color: #d76e14;
       /* Ajusta la posición de los pines de operador según sea necesario */
       left: 250px;
       top: 110px;
@@ -780,21 +800,21 @@ h2 {
   @media (min-width: 993px) {
     /* Estilos para dispositivos con un ancho mínimo de 993px, como pantallas de escritorio */
     .developer-pin {
-      color: red;
+      color: #223169;
       /* Ajusta la posición de los pines de desarrollador según sea necesario */
       left: 1040px;
       top: 80px;
     }
   
     .constructor-pin {
-      color: blue;
+      color: #333;
       /* Ajusta la posición de los pines de constructor según sea necesario */
       left: 230px;
       top: 150px;
     }
   
     .operator-pin {
-      color: green;
+      color: #d76e14;
       /* Ajusta la posición de los pines de operador según sea necesario */
       left: 220px;
       top: 170px;
@@ -814,16 +834,13 @@ h2 {
     width: 120px; /* Tamaño del tooltip */
     opacity: 0;
     transition: opacity 0.6s;
+    margin: 0;
 }
 
 .pin:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }
-
-
-
-
 
 
 
