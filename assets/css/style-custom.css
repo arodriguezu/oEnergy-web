@@ -1,4 +1,6 @@
 /* GENERAL STYLES */
+
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -17,6 +19,13 @@ h2 {
     font-weight: 600;
 }
 
+.zoom-component {
+    transition: transform .5s; /* Animación */
+  }
+  
+  .zoom-component:hover {
+    transform: scale(1.02); /* Escala el elemento al 110% */
+  }
 
 /* TIMELINE */
 .section-container {
@@ -25,7 +34,7 @@ h2 {
     padding-left: 50px;
     padding-right: 50px;
     max-width: 100%; /* O el porcentaje que prefieras */
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -54,12 +63,12 @@ h2 {
     z-index: 2;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     background-color: white;
-    font-size: 32px; /* Ajusta este valor según sea necesario */
+    font-size: 42px; /* Ajusta este valor según sea necesario */
     color: #223169;
     text-align: center; /* Para alinear el ícono horizontalmente */
     line-height: 1; /* Para alinear el ícono verticalmente */
-    height: 80px; /* Asegúrate de que esta sea la misma que la anchura */
-    width: 80px; /* Asegúrate de que esta sea la misma que la altura */
+    height: 90px; /* Asegúrate de que esta sea la misma que la anchura */
+    width: 90px; /* Asegúrate de que esta sea la misma que la altura */
     display: flex; /* Añadido para ayudar a centrar el ícono */
     justify-content: center; /* Centra el ícono horizontalmente */
     align-items: center; /* Centra el ícono verticalmente */
@@ -113,11 +122,11 @@ h2 {
 }
 
 .icon-container .hover-info-top {
-    bottom: 70px;
+    bottom: 92px;
 }
 
 .icon-container .hover-info-bottom {
-    top: 70px;
+    top: 92px;
 }
 
 .line {
@@ -191,13 +200,22 @@ h2 {
 }
 
 
+@media (max-width: 1370px) {
+    .section-container {
+      height: 110vh;
+    }
+  }
+  
+
+
+
+
   
 
 /* QUE HACEMOS */
 
 .que-hacemos {
     background: linear-gradient(180deg, #AAA7A7 0%, rgba(217, 217, 217, 0.32) 100%);
-
 }
 
 .icon-que-hacemos {
@@ -209,14 +227,18 @@ h2 {
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     background-color: #4674b6;
-  }
-  
-  .icon-que-hacemos i {
+}
+
+.icon-que-hacemos i {
     font-size: 70px;
     color: white;
-  }
+}
 
-  .icon-custom-que-hacemos {
+.icon-container-que-hacemos {
+    position: relative;
+}
+
+.icon-custom-que-hacemos {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,13 +247,43 @@ h2 {
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     background-color: white;
-  }
+    position: relative;
+}
 
-  .icon-custom-que-hacemos i {
+.icon-custom-que-hacemos i {
     font-size: 70px;
     color: #4674b6;
+    position: relative;
+    z-index: 1;
+}
+
+.icon-overlay {
+    position: absolute;
+    top: 50%; /* Centramos verticalmente */
+    left: 60%; /* Centramos horizontalmente */
+    transform: translate(-50%, -50%); /* Aseguramos que el centro del overlay coincida con el centro del icono */
+    width: 400px;
+    max-width: 500px; /* Ajusta el ancho según sea necesario */
+    height: 400px; /* Ajusta la altura según sea necesario */
+    background-color: rgba(255, 255, 255, 0.8); /* Ajusta el color y la opacidad como desees */
+    color: #223169; /* Ajusta el color del texto como desees */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Alineamos el texto al centro */
+    padding: 20px; /* Añadimos algo de relleno */
+    opacity: 0; /* inicialmente oculto */
+    transition: opacity 0.3s ease; /* animación opcional */
+    overflow: auto; /* Aseguramos que se pueda hacer scroll si el contenido es muy largo */
+    border-radius: 20px; /* Añadimos bordes redondeados para estilización */
+    z-index: 2;
   }
   
+  .icon-custom-que-hacemos:hover .icon-overlay {
+    opacity: 1; /* se muestra cuando se hace hover */
+  }
+  
+
 
 
 /* MISION Y VISION */
@@ -306,10 +358,10 @@ h2 {
   
   .custom-text-center {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0;
     padding: 10px;
-    line-height: 33px;
+    line-height: 38px;
   }
   
   .text-container-vision {
@@ -329,11 +381,16 @@ h2 {
   
   
 /* VALORES */
+
 .valores {
     background: linear-gradient(180deg, #5173AD 0%, rgba(81, 115, 173, 0) 100%);
 
   }
-  
+
+.highlight-valores {
+    font-weight: bold;
+}
+
   .valores h1 {
     margin: 0 auto;
     width: 50%;
@@ -343,7 +400,7 @@ h2 {
   .custom-card {
     display: flex;
     position: relative;
-    min-height: 350px;
+    min-height: 310px;
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
@@ -373,7 +430,7 @@ h2 {
   }
   
   .custom-card .card-title {
-    color: #0d2436;
+    color: #223169;
     font-size: 22px;
     font-weight: 400;
   }
@@ -432,28 +489,28 @@ h2 {
   .our-team .our-team-overlay {
     position: absolute;
     top: 40%;
-    left: 70%;
+    left: 75%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.6);
     padding: 10px;
     text-align: center;
     width: 600px;
-    height: 410px;
+    height: 310px;
     border-radius: 20px;
   }
   
   .our-team .our-team-overlay h1{
-    color: #0d2436;
+    color: #223169;
     font-size: 40px;
     text-align: end;
   }
   .our-team .our-team-overlay p {
-    color: #0d2436;
+    color: #223169;
     font-weight: 400;
     margin: 0;
     text-align: end;
-    font-size: 22px;
-    padding-top: 15%;
+    font-size: 20px;
+    padding-top: 2%;
     line-height: 33px;
   }
   
@@ -471,6 +528,11 @@ h2 {
     object-position: center top;
   }
   
+  .highlight {
+    font-weight: 400;
+    font-style: italic;
+  }
+
 
     /* NUESTROS EJECUTIVOS */
     .director-container {
@@ -554,6 +616,10 @@ h2 {
       }
 
 
+      .person-carousel {
+        color: #223169;
+      }
+
 
       /* PROYECTOS */
       .horizontal-line-white {
@@ -571,7 +637,7 @@ h2 {
     .counter-title {
         font-weight: 500;
         color: #223169;
-        font-size: 18px;
+        font-size: 20px;
     }
 
 
@@ -734,4 +800,93 @@ h2 {
       top: 170px;
     }
   }
+  
+  .tooltip {
+    visibility: hidden;
+    background-color: whitesmoke;
+    color: #223169;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Coloca el tooltip por encima del pin */
+    width: 120px; /* Tamaño del tooltip */
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.pin:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+  footer {
+    bottom: 0;
+    width: 100%;    
+}
+  
+/* CONTACTANOS */
+.contact-section {
+    background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-form-container {
+    width: 800px;
+    padding: 25px;
+    border-radius: 5px;
+    border-radius: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #223169;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-radius: 0px;
+  
+  }
+  
+  .contact-form button {
+    width: 120px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #45a049;
+  }
+  
+  
+
   

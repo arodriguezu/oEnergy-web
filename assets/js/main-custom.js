@@ -29,7 +29,6 @@ const checkScroll = () => {
 window.addEventListener('scroll', checkScroll);
 
 
-
 //MAPA
 $(document).ready(function() {
   $('#developer-checkbox').change(function() {
@@ -92,15 +91,38 @@ $(document).ready(function() {
 
 
 
+// Obtener la resolución de pantalla
+var screenWidth = screen.width;
+var screenHeight = screen.height;
 
-// Inicializa el mapa
-
-var map = L.map('map').setView([-33.4372, -70.6506], 3);
-console.log(map);
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 100,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+// Mostrar la resolución en la consola
+console.log("Resolución de pantalla: " + screenWidth + "x" + screenHeight);
 
 
+   // Obtener todos los contenedores de iconos
+   const iconContainers = document.querySelectorAll('.icon-container-que-hacemos');
+
+   // Función para ajustar la posición del tooltip
+   function adjustTooltipPosition(tooltip) {
+       const iconContainer = tooltip.parentElement;
+       const iconRect = iconContainer.getBoundingClientRect();
+       const tooltipRect = tooltip.getBoundingClientRect();
+
+       // Calcular la posición del tooltip en relación al icono
+       const left = iconRect.left + (iconRect.width / 2) - (tooltipRect.width / 2);
+
+       // Ajustar la posición del tooltip
+       tooltip.style.left = `${left}px`;
+   }
+
+   // Ajustar la posición de los tooltips al cargar la página
+   window.addEventListener('load', () => {
+       const tooltips = document.querySelectorAll('.tooltip-que-hacemos');
+       tooltips.forEach(tooltip => adjustTooltipPosition(tooltip));
+   });
+
+   // Ajustar la posición de los tooltips al redimensionar la ventana
+   window.addEventListener('resize', () => {
+       const tooltips = document.querySelectorAll('.tooltip-que-hacemos');
+       tooltips.forEach(tooltip => adjustTooltipPosition(tooltip));
+   });
