@@ -202,7 +202,18 @@ h2 {
     }
   }
   
+  @media (min-width: 1440px) {
+    .section-container {
+      height: 100vh;
+    }
+  }
 
+  @media (min-width: 1900px) {
+    .section-container {
+      height: 90vh;
+    }
+  }
+  
 
   
 
@@ -475,6 +486,12 @@ h2 {
         height: 70vh;
     }
   }
+
+  @media screen and (min-width: 1440px) {
+    .our-team {
+        height: 100vh;
+    }
+  }
   
   
   .our-carousel {
@@ -515,6 +532,13 @@ h2 {
     .our-team .our-team-overlay {
       top: 30%; /* Ajusta a tu gusto */
       left: 80%; /* Ajusta a tu gusto */
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .our-team .our-team-overlay {
+      top: 35%; /* Ajusta a tu gusto */
+      left: 75%; /* Ajusta a tu gusto */
     }
   }
   
